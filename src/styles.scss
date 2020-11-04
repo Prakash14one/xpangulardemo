@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/scss/base/_variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "assets/scss/base/theme";
+@import "assets/scss/base/_mixins";
+@import "assets/scss/base/_variables";
+@import "assets/scss/base/_base";
+
+@import "assets/scss/base/_common";
+
+// @import "~ngx-smart-modal/ngx-smart-modal";
+
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+// @import '~ngx-bar-rating/themes/br-stars-theme';
+@import '~ngx-bar-rating/themes/br-default-theme' ;
+
+
+
+mat-form-field {
+  width: 100%;
+}
+
+.mat-dialog-container{padding:0 !important;}
+.footer_sec{width:100%; display:inline-block}

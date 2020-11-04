@@ -1,0 +1,40 @@
+<div class="modal model_main model_main_cal" style="display: block;" id="myModal">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Send a Message</h4>
+                <button type="button" class="close" (click)="onNoClick()" data-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="payment_Sec_box">
+                    <form [formGroup]="messageForm">
+                        <div class="row cal_main">
+                            <!-- <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <input type="text" class="form-control" formControlName="subject" placeholder="Subject*">
+                            </div> -->
+                            <label *ngIf="show" style="color:green;font-size: 14px;padding: 10px;">Message Sent Successfully!</label>
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <textarea class="form-control" formControlName="message" placeholder="Message*"></textarea>
+                                <span style='color: red;'
+                                *ngIf="!messageForm.controls['message'].valid && ( messageForm.controls['message'].touched)">
+                                Required.
+                              </span>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-4">
+                                <button type="submit" (click)="sendMessage()" class="btn btn-primary mr-2">Submit</button>
+                                <button type="submit" (click)="cancel()" class="btn btn-primary blank add_btn">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

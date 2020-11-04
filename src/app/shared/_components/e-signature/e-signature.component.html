@@ -1,0 +1,50 @@
+<div class="col-md-6 col-sm-12 esig">
+  <div class="left-section">
+    <div class="inner-section">
+      <div class="modal-header">
+        <h5 class="modal-title">E-SIGNATURE</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onNoClick()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="form-sec">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Service professional Id</label>
+            <p>00122</p>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Rate Service Provider</label>
+            <bar-rating [(rate)]="cssRate" [max]="5" (rateChange)='rate($event)'></bar-rating>
+            <!-- <p>{{rating}}</p> -->
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Share your Experience</label>
+            <label for="exampleInputPassword1">Message</label>
+            <textarea></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Make a suggestion</label>
+            <label for="exampleInputPassword1">Message</label>
+            <textarea></textarea>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="signature">
+        <p>Electronic Signature</p>
+        <button *ngIf='view' type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal"
+          id='sig' (click)='attach()'>Attach
+          Signature</button>
+      </div>
+    </div>
+    <img [src]='signatureImage' *ngIf='!view'>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" data-dismiss="modal">Submit</button>
+  <button type="button" class="btn btn-success" data-dismiss="modal" (click)="onNoClick()">Cancel</button>
+</div>

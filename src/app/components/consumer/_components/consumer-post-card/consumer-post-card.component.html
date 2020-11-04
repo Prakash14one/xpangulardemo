@@ -1,0 +1,65 @@
+<div class="container-fluid payment_Sec">
+  <div class="container">
+  <span class="text-uppercase" *ngIf="elements"> {{elements.length}} projects</span>
+    <div *ngIf="!isGridView" class="table_list main_boxes">
+   
+      <div *ngFor="let element of elements;let i = index" class="main_box">
+      
+        <div class="main_box_head">
+          <h2>{{element.title}}</h2>
+          <!-- <label>Progress: 20% </label> -->
+          <div class="progressbar" data-animate="false">
+            <div class="circle" data-percent="20"><canvas width="22" height="22"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="main_box_body">
+        <div class="row">
+           <div class="col-12 col-md-9">
+             <ul class="complete_list half">
+            <li>
+              <p>Posted Date</p><span class="span_text">{{element.postDate | date: 'yyyy-dd-MM'}}</span>
+            </li>
+            <li>
+              <p>Start Date</p><span class="span_text">{{element.desiredRangeStart | date: 'yyyy-dd-MM'}}</span>
+            </li><br />
+            <li>
+              <p>Bid</p><span class="span_text">{{currencySymbol}}{{element.sowAmount}}</span>
+            </li><br />
+            <li>
+              <p>Consumer ID</p><span class="span_text">{{element.id}}</span>
+            </li><br />
+            <li>
+              <p>Category Name</p><span class="span_text">{{element.category}}</span>
+            </li>
+            <li>
+              <p>Sub Category Name</p><span class="span_text">{{element.subCategory}}</span>
+            </li>
+          </ul>
+           </div>
+           <div class="col-12 col-md-3">
+              <div>
+           <circle-progress [space]="-5" [titleFontSize]="8" [unitsFontSize]="8" [percent]="element.percentageComplete"
+                [radius]="40" [animation]="true" [animationDuration]="300">
+              </circle-progress>
+          </div>
+           </div>
+        </div>
+          
+          
+          <span class="action">
+            <a href="javascript:void(0);" (click)=showHideTab(i) class="slide_icon"></a>
+            <span id="slideaction" *ngIf="show && val==i" role="dialog" class="slide_list">
+              <a (click)="onListPopUp(element.id)"></a>
+                <a class="msg1" (click)="onmszPopUp(element.id,element.providerId)"></a>
+                <a class="cal" data-toggle="modal" (click)="onappoinmentPopUp()"></a><a (click)="onSowPopUp(element.id)" data-toggle="modal" class="per"></a>
+              <a (click)="onCancelPopUp(element.percentageComplete,element.sowAmount)" class="dis"></a></span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

@@ -1,0 +1,116 @@
+<div class="container-fluid singup_main_sec">
+  <div class="container ">
+    <div class="singup_box">
+      <h2>Complete your profile</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <input type="text" formControlName="firstName" class="form-control" placeholder="First Name*"
+              [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+            <div *ngIf="f.firstName.invalid && (f.dirty || f.firstName.touched)" class="alert alert-danger">
+              <div *ngIf="f.firstName.errors.required">
+                First Name is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <input type="text" formControlName="lastName" class="form-control" placeholder="Last Name*"
+              [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+            <div *ngIf="f.lastName.invalid && (f.dirty || f.lastName.touched)" class="alert alert-danger">
+              <div *ngIf="f.lastName.errors.required">
+                Last Name is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <input type="text" formControlName="email" class="form-control" placeholder="Email Address*"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="f.email.invalid && (f.dirty || f.email.touched)" class="alert alert-danger">
+              <div *ngIf="f.email.errors.required">
+                Email is required.
+              </div>
+              <div *ngIf="f.email.errors.email">
+              Valid Email address required
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <input type="text" formControlName="phone" class="form-control" placeholder="Phone*"
+              [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+            <div *ngIf="f.phone.invalid && (f.dirty || f.phone.touched)" class="alert alert-danger">
+              <div *ngIf="f.phone.errors.required">
+                Phone number is required.
+              </div>
+              <div *ngIf="f.phone.errors.maxlength">
+                Phone number length max 10.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <input placeholder="Password*" type="password" formControlName="password" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="f.password.invalid && (f.dirty || f.password.touched)" class="alert alert-danger">
+              <div *ngIf="f.password.errors.required">
+                password is required.
+              </div>
+              <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              <div *ngIf="f.password.errors.pattern">Your password field length should be between 5-8 combination of
+                letter and numbers.</div>
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <input placeholder="Confirm Password*" type="password" formControlName="confirmPassword"
+              class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+            <div *ngIf="f.confirmPassword.invalid && (f.dirty || f.confirmPassword.touched)" class="alert alert-danger">
+              <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+              <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <p class="note">Your password field length should be between 5-8 combination of letter and numbers.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <select class="selectpicker" formControlName="question" title="Security Question*">
+              <option>demo 1</option>
+              <option>demo 2</option>
+              <option>demo 3</option>
+            </select>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <input type="text" formControlName="answer" class="form-control" id="pwd1" placeholder="Answer*">
+
+            <div *ngIf="f.answer.invalid && (f.dirty || f.answer.touched)" class="alert alert-danger">
+              <div *ngIf="f.answer.errors.required">
+                Answer is required.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class=" checkbox_re">
+              <label class="control_tm control-checkbox">
+                <input type="checkbox" formControlName="terms">
+              
+              </label>
+              <p>I agree to the XpBids <a href="#">Terms and Conditions.</a></p>
+            </div>
+            <button type="submit" class="btn btn-primary">SIGN UP AS A Consumer</button>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- update git -->

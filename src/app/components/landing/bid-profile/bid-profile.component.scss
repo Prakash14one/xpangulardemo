@@ -1,0 +1,46 @@
+.mat_header {
+  padding-bottom: 0.6rem;
+  cursor: pointer;
+  border-bottom: 1px solid #e9ecef;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  background: #ececec;
+  border-radius: 5px 5px 0 0;
+  padding-top: 12px;
+  position: relative;
+}
+.des {
+  margin-top: 20px;
+  max-width: 400px;
+}
+.profile_sec .des h3 {
+  font-size: 18px;
+  font-weight: 600;
+  span {
+    font-size: 15px;
+    color: #ef3500;
+    font-style: italic;
+  }
+}
+.close {
+    width: 16px;
+    height: 16px;
+    background: url(/assets/images/close_pop.png) no-repeat;
+    background-size: 16px;
+    opacity: 1;
+    position: absolute;
+    z-index: 5666;
+    right: 12px;
+    top: 8px;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+}
+.mat_header h4 {
+    text-align: left;
+    width: 100%;
+    font-size: 19px;
+    color: #333333;
+    padding: 12px;
+    text-transform: uppercase;
+}

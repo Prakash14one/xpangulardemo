@@ -1,0 +1,148 @@
+<div class="container" style='width: auto;height: auto;'>
+  <div mat-dialog-title style="margin-top: 10px;">
+    <button type="button" class="close" mat-button mat-dialog-close (click)='OnNoClick()'>X</button>
+    <div>
+      <h3 style="color:#ff5312">{{data.bid.providerFirstName}}{{data.bid.providerLastName}}</h3>
+      <h5>Bid Amount:
+        {{(preparePrice + materialsPrice + firepitPrice + lightsPrice) | currency: 'USD': 'symbol': '1.2-2'}}
+      </h5>
+
+    </div>
+  </div>
+  <div class="modal_content" mat-dialog-content>
+    <div class="model_main model_main_cal">
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class='container' *ngFor='let sow of sowPhases'>
+          <div class="row" >
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div>
+                <h4>{{sow.title}}</h4>
+                <div class="d-flex justify-content-between">
+                  <div>Phase Price: {{sow.cost | currency: 'USD': 'symbol': '1.2-2'}}</div>
+                  <div>Phase Time: {{sow.hours}}</div>
+                </div>
+              </div>
+              <ul *ngFor=' let task of sow.sowTasks'>
+                <li>{{task.title}}</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr />
+
+          <!-- <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div>
+                <h4>{{sowPhase2.title}}</h4>
+
+                <div class="d-flex justify-content-between">
+                  <div>Phase Price: {{materialsPrice | currency: 'USD': 'symbol': '1.2-2'}}</div>
+                  <div>Phase Time: {{materialsToW}}</div>
+                </div>
+                <mat-select placeholder="Please Select One" [(value)]="materialsSelection"
+                  (selectionChange)="materialsChanged()">
+                  <mat-option value=1>Stamped Concrete</mat-option>
+                  <mat-option value=2>Plain Concrete</mat-option>
+                  <mat-option value=3>Pavers</mat-option>
+                </mat-select>
+              </div>
+              <div *ngIf="materialsSelection==1">
+                <ul>
+                  <li>Clear the grass and dirt</li>
+                  <li>Pour concrete</li>
+                  <li>Stamp concrete</li>
+                </ul>
+              </div>
+              <div *ngIf="materialsSelection==2">
+                <ul>
+                  <li>Clear the grass and dirt</li>
+                  <li>Pour sand</li>
+                  <li>Lay pavers</li>
+                  <li>Add poly sand</li>
+                  <li>Seal pavers</li>
+                </ul>
+              </div>
+              <div *ngIf="materialsSelection==3">
+                <ul>
+                  <li><i class="fa fa-cirlce"></i>Clear the grass and dirt</li>
+                  <li>Pour concrete</li>
+                  <li>Smooth concrete</li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <hr /> -->
+
+          <!-- <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div>
+                <h4>Add Firepit</h4>
+                <div class="d-flex justify-content-between">
+                  <div>Phase Price: {{firepitPrice | currency: 'USD': 'symbol': '1.2-2'}}</div>
+                  <div>Phase Time: {{firepitToW}}</div>
+                </div>
+                <mat-checkbox [(ngModel)]="isOption1Selected" (change)="firepitSelectionChanged()">Include This Option?
+                </mat-checkbox>
+              </div>
+              <ul>
+                <li>Install Firepit</li>
+              </ul>
+            </div>
+          </div> -->
+
+          <!-- <hr /> -->
+
+          <!-- <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div>
+                <h4>Add Lights</h4>
+                <div class="d-flex justify-content-between">
+                  <div>Phase Price: {{lightsPrice | currency: 'USD': 'symbol': '1.2-2'}}</div>
+                  <div>Phase Time: {{lightsToW}}</div>
+                </div>
+                <mat-checkbox [(ngModel)]="isLightSelected" (change)="lightSelectionChanged()">Include This Option?
+                </mat-checkbox>
+                <mat-select placeholder="Please Select One" [(value)]="lightsSelection"
+                  (selectionChange)="lightsChanged()" [disabled]="!isLightSelected">
+                  <mat-option value=1>Light Posts</mat-option>
+                  <mat-option value=2>Led ground lights</mat-option>
+                </mat-select>
+              </div>
+              <div *ngIf="lightsSelection==1">
+                <ul>
+                  <li>Install light posts</li>
+                </ul>
+              </div>
+              <div *ngIf="lightsSelection==2">
+                <ul>
+                  <li>Install ground lights</li>
+                </ul>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="d-flex justify-content-between">
+    <div>
+      <h5>Estimated Time of Work:&nbsp;{{totalTime}}&nbsp;Days</h5>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary" style="margin-right: 8px;">
+        Accept Bid
+      </button>
+      <button type="submit" class="btn btn-primary" style="margin-right: 8px;">
+        Update Total
+      </button>
+      <button type="submit" class="btn btn-primary blank add_btn"
+        style="margin-right: 8px; background-color: white; color: #ff5312;" (click)='OnNoClick()'>
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

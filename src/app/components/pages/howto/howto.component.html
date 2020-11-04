@@ -1,0 +1,364 @@
+<header>
+  <div class="container-fluid header_top">
+    <div class="container">
+      <ul class="text-right m-0">
+        <li>
+          <a routerLink="/faq" (click)="toggle('help')">Help</a>
+        </li>
+        <li>
+          <a routerLink='/tutorial'>View Tutorials </a>
+        </li>
+        <li class="pr-0">
+          <a href="../index.html" class="logout"> Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid header_main">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html"><img src="../../../assets/images/logo.png" width="123" height="50"
+            class="logo_for_desk" alt="logo">
+          <img src="../../../assets/images/logo_small.png" width="45" height="34" class="logo_for_mobile"
+            alt="logo"></a>
+        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+          data-target="#collapsingNavbar">
+          <span> </span>
+          <span> </span>
+          <span> </span>
+        </button>
+        <div class="container-fluid term_top_sec" *ngIf='help'>
+          <div class="container term_box">
+            <ul>
+              <li><a routerLink="/faq">FAQ</a></li>
+              <li><a routerLink="/howto" class="active">How To</a></li>
+              <li><a routerLink="/useragreement">User Agreement &amp; Policy </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" [ngClass]="{'active' : post == true}" [routerLink]="['/consumer/post']"
+                (click)="toggle('post')">My Posts </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Messages </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active' : calendar == true}" [routerLink]="['/consumer/calendar']"
+                (click)="toggle('calendar')">Calendar </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active' : account == true}" [routerLink]="['/consumer/manageaccount']"
+                (click)="toggle('account')">
+                Manage Account </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active' : payment == true}" [routerLink]="['/consumer/e_sig']"
+                (click)="toggle('payment')"> Payment
+              </a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a class="nav-link" href="help_faq.html">Help</a>q
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a class="nav-link" href="tutorial.html">View Tutorials</a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a class="nav-link" href="../index.html" class="logout"> Logout </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="rightMenu">
+        <li class="dropdown anim-drop Profile_sec dropdown-profile">
+          <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle msg_icon"
+            href="javascript:void(0)"><span></span></a>
+          <ul class="dropdown-menu ">
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <p>
+                <a href="messages.html">View All Messages</a>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown anim-drop Profile_sec dropdown-profile">
+          <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle notifi"
+            href="javascript:void(0)"><span></span><span class="badge"><b>2</b></span> </a>
+          <ul class="dropdown-menu dropdown-profile">
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <p>
+                <a href="#">View All Notifications</a>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown anim-drop Profile_sec">
+          <a aria-expanded="false" class="Profile_icon" href="javascript:void(0)">J</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="container-fluid term_top_sec">
+  <div class="container term_box">
+    <ul>
+      <li><a routerLink="/faq">FAQ</a></li>
+      <li><a routerLink="/howto" class="active">How To</a></li>
+      <li><a routerLink="/useragreement">User Agreement &amp; Policy </a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid forum_list">
+  <div class="container ">
+    <div class="faq_list">
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne" (click)="toggle('headingOne','collapseOne','headerOne')">
+            <h5 id="headerOne" class="mb-0 d-inline" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              How to Post a project part 1
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
+            <div class="card-body">
+              <p>
+                <b> Posting a project on Xpbids is very simple</b><br><br>
+                1. First Identify the Installation, service or repair you want<br>
+                2. For example if you decided that you need a service professional to install your new
+                television<br><br>
+                a. Simply take a picture of your TV<br>
+                b. Take a picture of the Wall you would like your TV to hang<br>
+                c. Select “Lets get started” from the Xpbids homepage to complete the quick enrollment or sign into your
+                account<br><br>
+                <br>
+                <img src="assets/images/howto001.jpg"><br><br>
+              <p>
+                <b>
+                  Complete the quick sign up form</b>
+                <br><br>
+                <img src="assets/images/howto002.jpg"><br><br>
+              </p>
+              <p>
+                <b> From the "My Post" tab select the "Create New Post" button </b> <br><br>
+                <img src="assets/images/howto003.jpg"><br><br>
+              </p>
+              <p>
+                <b> Simply Complete the New Post form and Submit</b>
+
+                <br><br>
+                <img src="assets/images/howto004.jpg"><br><br>
+                <img src="assets/images/howto005.jpg"><br>
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading21" (click)="toggle('heading21','collapse21','header21')">
+            <h5 id="header21" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse21"
+              aria-expanded="false" aria-controls="collapse21">
+              How can I fund my project?
+            </h5>
+          </div>
+          <div id="collapse21" class="collapse " aria-labelledby="heading21" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+                We know that starting and completing your projects requires funding,
+                that is why Xpbids have partnered with the very best sources….such as
+                SOFI, Lending Tree and Upstart to expedite your personal loan needs.
+                Simply select the SOFI, Lending Tree or Upstart logo anywhere on our
+                platform, you will be routed to their website to complete the Personal
+                Loan application. Once you complete your application and secure funding,
+                please return to Xpbids to fund your project.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading22" (click)="toggle('heading22','collapse22','header22')">
+            <h5 id="header22" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse22"
+              aria-expanded="false" aria-controls="collapse22">
+              How can I contribute to Xpbids Blog?
+            </h5>
+          </div>
+          <div id="collapse22" class="collapse " aria-labelledby="heading22" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+                If you are a Service Professional, we want to thank you for choosing to partner with Xpbids, we truly
+                value the services you provide to consumers. We feel that educating and informing consumers about the
+                wear and tear of their Home and products goes a long way in enhancing and maintaining their home or
+                other services. That is why we are inviting you as a service professional to support the Xpbids blog
+                community by becoming a contributor.<br>
+                1. Choose a topic or subject related to your category of expertise <br>
+                2. Make sure that the content is informative to the consumer <br>
+                3. Make sure that the content is not offensive <br>
+                4. Submit your content to submitblog@xpbids.com <br>
+                5. Once we review your submission we will send you a confirmation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading23" (click)="toggle('heading23','collapse23','header23')">
+            <h5 id="header23" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse23"
+              aria-expanded="false" aria-controls="collapse23">
+              How do I find the right category?
+            </h5>
+          </div>
+          <div id="collapse23" class="collapse " aria-labelledby="heading23" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+                All our Categories are accessible from the landing page. Simply tap or
+                select the categories tab on the landing page to be navigated to the Categories
+                section of the page. If you do not see the exact categories to you are looking for,
+                you may select the all categories button to view all categories available to you. <br><br>
+                <img src="assets/images/howto006.jpg">
+                <br><br><br>
+                <img src="assets/images/howto007.jpg">
+                <br><br><br>
+                <img src="assets/images/howto008.jpg">
+                <br><br><br>
+                <img src="assets/images/howto008.jpg">
+                <br><br>
+                <b>
+                  You may also gain easy access to all subcategories from the Consumer Post a project view
+                </b>
+                <br><br>
+                <img src="assets/images/howto009.jpg"><br><br><br>
+                <img src="assets/images/howto010.jpg">
+                <br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading24" (click)="toggle('heading24','collapse24','header24')">
+            <h5 id="header24" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse24"
+              aria-expanded="false" aria-controls="collapse23">
+              How do I register on Xpbids as Consumer?
+            </h5>
+          </div>
+          <div id="collapse24" class="collapse " aria-labelledby="heading24" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+                Registering on Xpbids as a consumer is very easy.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading25" (click)="toggle('heading25','collapse25','header25')">
+            <h5 id="header25" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse25"
+              aria-expanded="false" aria-controls="collapse25">
+              How do I register on Xpbids as a Service Professional?
+            </h5>
+          </div>
+          <div id="collapse25" class="collapse " aria-labelledby="heading25" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading26" (click)="toggle('heading26','collapse26','header26')">
+            <h5 id="header26" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse26"
+              aria-expanded="false" aria-controls="collapse26">
+              How do I manage disputes?
+            </h5>
+          </div>
+          <div id="collapse26" class="collapse " aria-labelledby="heading26" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading27" (click)="toggle('heading27','collapse27','header27')">
+            <h5 id="header27" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse27"
+              aria-expanded="false" aria-controls="collapse27">
+              How do I make payment?
+            </h5>
+          </div>
+          <div id="collapse27" class="collapse " aria-labelledby="heading27" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="heading28" (click)="toggle('heading28','collapse28','header28')">
+            <h5 id="header28" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse28"
+              aria-expanded="false" aria-controls="collapse28">
+              What if Service Professional needs to inspect a project before bidding?
+            </h5>
+          </div>
+          <div id="collapse28" class="collapse " aria-labelledby="heading28" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+                There are projects that are complex enough that requires the Service
+                Professional to inspect before placing a bid, in such a scenario the
+                Service Professional will inform the consumer and in addition utilize
+                the Xpbids appointment tool to find a convenient time. Upon inspection
+                of the project Service Professional will complete their SOW and submit a bid for the project.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

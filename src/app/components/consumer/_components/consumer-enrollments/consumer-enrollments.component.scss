@@ -1,0 +1,126 @@
+@import '../../../../../assets/scss/base/variables';
+@import '../../../../../assets/scss/base/mixins';
+
+body {
+  background: #e4e4e4;
+}
+.singup_box{
+background: #fff;
+-webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+-moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+padding: 30px 30px 25px 30px;
+min-height: 580px;
+}
+.singup_box{
+h2{
+    font-size: 30px;
+    color: #333333;
+    font-weight: 600;
+    font-family: "Raleway", sans-serif;
+}
+input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    color: #7a7a7a;
+    font-size: 14px;
+    outline: 0;
+    line-height: 40px;
+    padding: 5px 20px 0px 0px;
+    text-align: left;
+    transition: all 0.3s;
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+select{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    color: #7a7a7a;
+    font-size: 14px;
+    outline: 0;
+    line-height: 40px;  
+      height: 40px;
+    padding: 5px 20px 0px 0px;
+    text-align: left;
+    transition: all 0.3s;
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}
+.form-group{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+p{
+    font-size: 13px;
+    color: #7a7a7a;
+    line-height: 20px;
+    text-align: left;
+}
+ a:hover {
+    color: #f45117;
+}
+ a {
+    font-weight: 700;
+    color: #7a7a7a;
+    text-decoration: none;
+}
+button{
+    border: 0px solid #fff;
+    margin-top: 10px;
+    background: #f45117;
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 11px 31px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 800ms ease-out;
+    position: relative;
+    margin-right: 20px;
+}
+input[type="checkbox"]{
+   
+    height: 17px;
+    width: 17px;
+    background: #fff;
+    border-radius: 0px;
+    border: 1px solid #d7d7d7;
+    padding: 0;
+}
+
+::placeholder {
+  text-transform: uppercase;
+  }
+}
+
+.checkbox_re {
+    display: flex;
+}
+.checkbox_re{
+    p{
+     padding:0px 5px;
+    }
+}
+.singup_main_sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.singup_main_sec .singup_box form {
+    text-align: center;
+    margin-top: 9px;
+    display: flow-root;
+}

@@ -1,0 +1,187 @@
+<div class="container-fluid payment_Sec">
+  <div class="container ">
+     <div role="tabpanel" class="payment_Sec_box" >
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs responsive-tabs" role="tablist">
+           <li role="presentation">
+              <a href="#home" class="active" aria-controls="home" role="tab" data-toggle="tab">PayPal Account Details</a>
+           </li>
+           <li role="presentation">
+              <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Card Details </a>
+           </li>
+           <li role="presentation">
+              <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Bank Account Details</a>
+           </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+           <div role="tabpanel" class="tab-pane animate-opacity active" id="home">
+              <form action="#">
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text1" placeholder="Email Address*">
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text2" placeholder="Confirm Email Address*">
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-0">
+                       <label class="inline-label control_r control-radio">
+                       <input id="enquery" value="0" name="changed" type="radio">
+                       <span class="control_label">Select as Primary mode of Payment</span>
+                       <span class="control_indicator_r"></span> </label>
+                    </div>
+                    <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">                
+                       <button type="submit" class="btn btn-primary">ADD</button>
+                       <button type="submit" class="btn btn-primary blank">cancel</button>
+                    </div>
+                 </div>
+              </form>
+           </div>
+           <div role="tabpanel" class="tab-pane animate-opacity" id="tab1">
+              <form action="#" id="add_card">
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control card" id="text3" placeholder="cARD nUMBER*">
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text4" placeholder="Name on Card*">
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text5" placeholder="CVV Number*">
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <select class="selectpicker" title="MM">
+                          <option>01</option>
+                          <option>02</option>
+                          <option>03</option>
+                          <option>04</option>
+                          <option>05</option>
+                          <option>06</option>
+                          <option>07</option>
+                          <option>08</option>
+                          <option>09</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                       </select>
+                       <select class="selectpicker" title="YY">
+                          <option>2018</option>
+                          <option>2019</option>
+                          <option>2020</option>
+                       </select>
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text6" placeholder="Amount*">
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-0">
+                       <label class="inline-label control_r control-radio">
+                       <input id="enquery_1" value="0" name="changed" type="radio">
+                       <span class="control_label">Select as Primary mode of Payment</span>
+                       <span class="control_indicator_r"></span> </label>
+                    </div>
+                    <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">                
+                       <button type="submit" class="btn btn-primary add_btn">ADD</button>
+                       <button type="submit" class="btn btn-primary blank">cancel</button>
+                    </div>
+                 </div>
+              </form>
+              <div class="saved_card" id="card_list" style="display: none;">
+                 <h3>My Saved Cards <a href="#" class="add_btn">Add New Card</a></h3>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                       <div class="card_box">
+                          <div class="card_icon">
+                             <img src="../images/visa_icon.png" alt="icon">
+                          </div>
+                          <p>HDfc Bank<br>
+                             <span>5548 9545 5418 9108 </span><br>
+                             Credit Card
+                          </p>
+                          <div class="card_action">
+                             <a href="#" class="edit"></a>
+                             <a href="#" ></a>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                       <div class="card_box">
+                          <div class="card_icon">
+                             <img src="../images/visa_icon.png" alt="icon">
+                          </div>
+                          <p>HDfc Bank<br>
+                             <span>5548 9545 5418 9108 </span><br>
+                             Credit Card
+                          </p>
+                          <div class="card_action">
+                             <a href="#" class="edit"></a>
+                             <a href="#" ></a>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                       <div class="card_box">
+                          <div class="card_icon">
+                             <img src="../images/visa_icon.png" alt="icon">
+                          </div>
+                          <p>HDfc Bank<br>
+                             <span>5548 9545 5418 9108 </span><br>
+                             Credit Card
+                          </p>
+                          <div class="card_action">
+                             <a href="#" class="edit"></a>
+                             <a href="#" ></a>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div role="tabpanel" class="tab-pane animate-opacity" id="tab2">
+              <form action="#">
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text7" placeholder="Account Holder Name*">
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text8" placeholder="Bank Account Number*">
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text9" placeholder="Confirm Bank Account Numbers*">
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text10" placeholder="Bank Name*">
+                    </div>
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                       <input type="text" class="form-control" id="text11" placeholder="Bank Routing Number*">
+                    </div>
+                 </div>
+                 <div class="row">
+                    <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-0">
+                       <label class="inline-label control_r control-radio">
+                       <input id="enquery_2" value="0" name="changed" type="radio">
+                       <span class="control_label">Select as Primary mode of Payment</span>
+                       <span class="control_indicator_r"></span> </label>
+                    </div>
+                    <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">                
+                       <button type="submit" class="btn btn-primary">ADD</button>
+                       <button type="submit" class="btn btn-primary blank">cancel</button>
+                    </div>
+                 </div>
+              </form>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>

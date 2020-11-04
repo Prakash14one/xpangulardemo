@@ -1,0 +1,56 @@
+
+
+.create_new_box { 
+    height: 40px;
+    background-color: #E95312;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 5px 0px 5px 0px;
+}
+
+.create_new_post a {
+    background: #ffffff;
+    float: left;
+    margin: 0px 15px 0 15px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #E95312;
+    font-weight: 400;
+    border: 0px;
+    padding: 6px 32px 6px 20px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    border-radius: 24px;
+    -webkit-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    -moz-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    position: relative;
+}
+
+.financing_available_from {
+    padding: 5px 0px 5px 0px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.financing_available_from a{
+    padding: 5px 10px 5px 10px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.financing_available_logos {
+    margin: 0px 0px 0px 0px;
+}
+
+.financing_available_logos a{
+    color: #ffffff;
+    padding: 5px 5px 5px 5px;
+}
+a.logo_f img {
+    height: 25px;
+    vertical-align: bottom;
+    }

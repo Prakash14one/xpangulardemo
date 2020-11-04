@@ -1,0 +1,25 @@
+<xb-header></xb-header>
+<div class="container-fluid noPadd white_bg" style="display: flow-root;">
+  <div class="container services">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 left-services">
+        <xb-left-side-nav></xb-left-side-nav>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 privacy-sec categories-right">
+        <div *ngIf="categoriesData">
+          <h1>{{categoriesData.title}}</h1>
+          <div *ngIf="categoriesData.images" class="categories-types">
+            <ul class="noPadd">
+              <li *ngFor="let imageUrl of categoriesData.images"
+                class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noPadd categories-img">
+                <img [src]="imageUrl" class="w100" />
+              </li>
+            </ul>
+          </div>
+          <div class="catDesc" [innerHTML]="categoriesData.description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

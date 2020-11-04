@@ -1,0 +1,45 @@
+<div class="container-fluid singup_main_sec" style='width: auto;overflow: auto;max-height:800px'>
+  <button type="button" class="close" mat-button mat-dialog-close (click)='OnNoClick()'>X</button>
+  <div class="container setting_top ">
+    <h3>Add new</h3>
+    <div class="singup_box">
+      <form [formGroup]='newadd'>
+        <div class="row">
+<div class="row">
+  <div class="col-12 txt-area">
+    <input type="text" class="form-control" id="pwd" placeholder="Address Title" formControlName='add_title'>
+    <div *ngIf="add_title.invalid && (add_title.dirty || add_title.touched)" class="alert alert-danger">
+      <div *ngIf="add_title.errors.required">
+        Address Title is required.
+      </div>
+    </div>
+    <input type="text" class="form-control" id="pwd" placeholder="Address 1" formControlName='add_1'>
+    <div *ngIf="add_1.invalid && (add_1.dirty || add_1.touched)" class="alert alert-danger">
+      <div *ngIf="add_1.errors.required">
+        Address1 is required.
+      </div>
+    </div>
+    <input type="text" class="form-control" id="pwd" placeholder="Address 2" formControlName='add_2'>
+    <div *ngIf="add_2.invalid && (add_2.dirty || add_2.touched)" class="alert alert-danger">
+      <div *ngIf="add_2.errors.required">
+        Address2is required.
+      </div>
+    </div>
+    <input type="text" class="form-control" id="pwd" placeholder="City" formControlName='city'>
+    <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert alert-danger">
+      <div *ngIf="city.errors.required">
+        city is required.
+      </div>
+    </div>
+    <input type="text" class="form-control" id="pwd" placeholder="Zip Code" formControlName='zipCode'>
+    <div *ngIf="zipCode.invalid && (zipCode.dirty || zipCode.touched)" class="alert alert-danger">
+      <div *ngIf="zipCode.errors.required">
+        Zip code is required.
+      </div>
+    </div>
+
+    <button class="sub-btn" (click)="add()">
+      SUBMIT
+    </button>
+  </div>              
+</div>

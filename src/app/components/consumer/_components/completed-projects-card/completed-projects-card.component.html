@@ -1,0 +1,260 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="grid_view" style="display: block;">
+      <div class="row top_search">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <p>50 projects</p>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <form class="form_top">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+          </form>
+        </div>
+      </div>
+      <div class="row main_boxes">
+        <div class="main_box" *ngFor='let data of completedprojects'>
+          <div class="main_box_head">
+            <h2>{{data.title}}</h2>
+            <label>{{data.category}}</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">{{data.desiredRangeEnd | date: 'yyyy-dd-MM'}}</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">{{data.id}}</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#">{{data.status}}</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a> </span></span>
+          </div>
+        </div>
+        <!-- <div class="main_box">
+          <div class="main_box_head">
+            <h2>Laptop Screen task and repair task</h2>
+            <label>Automobile/Speakers</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#" class="ruby">Cancelled</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a></span></span>
+          </div>
+        </div>
+        <div class="main_box">
+          <div class="main_box_head">
+            <h2>Laptop Screen task and repair task</h2>
+            <label>Automobile/Speakers</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#">Completed</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a></span></span>
+          </div>
+        </div>
+        <div class="main_box">
+          <div class="main_box_head">
+            <h2>Laptop Screen task and repair task</h2>
+            <label>Automobile/Speakers</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#" class="ruby">Rejected</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a> </span></span>
+          </div>
+        </div>
+        <div class="main_box">
+          <div class="main_box_head">
+            <h2>Laptop Screen task and repair task</h2>
+            <label>Automobile/Speakers</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#">Completed</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a> </span></span>
+          </div>
+        </div>
+        <div class="main_box">
+          <div class="main_box_head">
+            <h2>Laptop Screen task and repair task</h2>
+            <label>Automobile/Speakers</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#" class="ruby">Cancelled</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a> </span></span>
+          </div>
+        </div>
+        <div class="main_box">
+          <div class="main_box_head">
+            <h2>Laptop Screen task and repair task</h2>
+            <label>Automobile/Speakers</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#">Completed</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a> </span></span>
+          </div>
+        </div>
+        <div class="main_box">
+          <div class="main_box_head">
+            <h2>Laptop Screen task and repair task</h2>
+            <label>Automobile/Speakers</label>
+          </div>
+          <div class="main_box_body">
+            <ul class="complete_list">
+              <li>
+                <p>Completed Date</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Consumer ID</p>
+                <span class="span_text">08-24-2016</span>
+              </li>
+              <li>
+                <p>Status</p>
+                <a href="#" class="ruby">Rejected</a>
+              </li>
+            </ul>
+            <span class="action">
+              <a href="javascript:void(0)" class="slide_icon"></a>
+              <span class="slide_list" style="display: none;">
+                <a href="#" data-toggle="modal" data-target="#myModal"></a><a href="#" class="msg1" data-toggle="modal"
+                  data-target="#myModal_msg"></a><a href="#" class="cal" data-toggle="modal"
+                  data-target="#myModal_cal"></a><a href="#" data-toggle="modal" data-target="#statement_mod"
+                  class="per"></a>
+                <a href="#" class="sign" data-toggle="modal" data-target="#myModal_e"></a> </span></span>
+          </div>
+        </div> -->
+        <p class="btn_bottom"><a href="javascript:void(0)">Load More</a></p>
+      </div>
+    </div>
+  </div>
+</div>

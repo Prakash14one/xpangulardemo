@@ -1,0 +1,65 @@
+
+<div class="container-fluid payment_Sec">
+  <div class="container">
+    <div *ngIf="!isGridView" class="table_list">
+      <div class="table_sec table_sec_smp">
+        <table style="width:100%;">
+          <tr>
+            <th>POST TITLE</th>
+            <th>POSTED DATE</th>
+            <th>STATUS</th>
+            <th>SERVICE PROVIDER</th>
+            <th>TOTAL AMOUNT</th>
+      
+            <!-- <th class="text-center">Status</th>
+            <th>Bid Price</th>
+            <th>Actions</th> -->
+          </tr>
+          <tr *ngFor="let el of elements">
+            <td>{{el.title}}</td>
+            <td>{{el.postDate | date: 'yyyy-dd-MM'}}</td>
+            <td>{{el.desiredRangeStart | date: 'yyyy-dd-MM'}}</td>
+            <td>{{el.id}}</td>
+            <td>{{el.category}}</td>
+            <td>{{el.subCategory}}</td>
+            <td>{{el.status}}
+              <!-- <circle-progress [space]="-5" [titleFontSize]="8" [unitsFontSize]="8" [percent]="el.percentageComplete"
+                [radius]="40" [animation]="true" [animationDuration]="300">
+              </circle-progress> -->
+            </td>
+            <td>{{currencySymbol}}{{el.sowAmount}}</td>
+            <td>
+              <span class="table_actions">
+                <a (click)="onListPopUp(el.id)"></a>
+                <a class="msg1" (click)="onmszPopUp(el.id,el.providerId)"></a>
+                <a class="cal" data-toggle="modal" (click)="onappoinmentPopUp()"></a>
+                <a (click)="onSowPopUp(el.id)" data-toggle="modal" class="per"></a>
+                <a (click)="onCancelPopUp(el.percentageComplete,el.sowAmount)" class="dis"></a>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--       <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          
+          <li class="page-item">
+            <a class="page-link " href="javascript:void(0)">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0)">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0)">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link next" href="javascript:void(0)"></a>
+          </li>
+        </ul>
+      </nav> -->
+    </div>
+
+
+
+  </div>
+</div>

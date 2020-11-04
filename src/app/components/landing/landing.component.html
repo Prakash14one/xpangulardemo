@@ -1,0 +1,281 @@
+<div class="container-fluid main_banner">
+  <div class="container">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 banner_text">
+      <h5>Welcome to XpBids</h5>
+      <h1>Get it done for Less!</h1>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2 class="d-block w-100">Handyman </h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="d-block w-100">Painter </h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="d-block w-100">Laminate Flooring</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="d-block w-100">Cieling Fan Installation</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="d-block w-100">Kitchen Remodeling</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="d-block w-100">Drywall Installation</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="d-block w-100">Drywall Repair</h2>
+          </div>
+          <div class="carousel-item">
+            <h2 class="d-block w-100">Recess Light installation</h2>
+          </div>
+        </div>
+      </div>
+      <a [routerLink]="['/lets-start']" >Let's Get Started</a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid team">
+  <div class="container">
+    <div class="text-center team_hd">
+      <h3> Now you can receive</h3>
+      <h2>Live Bids From Service Professionals!</h2>
+    </div>
+    <owl-carousel [options]="carouselOptions">
+      <div *ngFor="let service of servicesData;let i = index">
+        <div class="profile_sec">
+          <div class="profile_1">
+            <img [src]="'data:image/png;base64,'+service.image.data" alt="profile">
+          </div>
+          <div class="des">
+              <h3>{{service.firstName}} {{service.lastName}} <br>
+                <span>{{service.companyName}} </span></h3>
+            <p class="common_p">{{service.description | limitTo:110 }}</p>
+            <a (click)="openDetailDialogBox(service)" class="cursor"> Read More </a>
+          </div>
+        </div>
+      </div>
+    </owl-carousel>
+  </div>
+</div>
+
+<div id="how-itworks" class="container-fluid how-it-works">
+  <div class="container">
+    <h2 class="text-center"> How Does <span>This Work </span> </h2>
+    <div class="row bottom_sec">
+      <div class="col-sm-4 col-md-4 col-xl-2 slide-right">
+        <div class="works-icon"><img src="../assets/images/camera.png" alt="..." class="img-fluid"></div>
+        <h4>Take a picture of your project</h4>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xl-2 slide-right">
+        <div class="works-icon"><img src="../assets/images/write.png" alt="..." class="img-fluid"></div>
+        <h4>Write a description of the problem</h4>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xl-2 slide-right">
+        <div class="works-icon"><img src="../assets/images/post.png" alt="..." class="img-fluid"></div>
+        <h4>Post your Item</h4>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xl-2 slide-right">
+        <div class="works-icon"><img src="../assets/images/bid.png" alt="..." class="img-fluid"></div>
+        <h4>Get bids from service professionals</h4>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xl-2 slide-right">
+        <div class="works-icon"><img src="../assets/images/review.png" alt="..." class="img-fluid"></div>
+        <h4>Review and select a service provider</h4>
+      </div>
+      <div class="col-sm-4 col-md-4 col-xl-2 slide-right">
+        <div class="works-icon"><img src="../assets/images/track.png" alt="..." class="img-fluid"></div>
+        <h4>Track your project</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="categories" class="container-fluid category_out">
+  <div class="container">
+    <div class="text-center category_hd">
+      <h3> Quotes are frustrating</h3>
+      <h2>Get live bids in any category</h2>
+      <p class="common_p"> Our platform empowers you to find and choose the right service provider for your project
+        either small or<br> complex. We want to make the process of repair, installation and services easy for you.</p>
+    </div>
+    <div class="row" *ngFor="let categoryRow of homeServicesSubCategory">
+      <div class="col col{{i+1}} catgory_box" *ngFor="let category of categoryRow; let i = index;">
+        <div class="category">
+          <div class="cate_img"> <img [src]="category.thumb" class="img-fluid" alt="category_image">
+          </div>
+          <div class="overlay"><a [routerLink]="['/category',homeServicesCategory.slug, category.slug]"> {{category.title}} </a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center all_cete_btn">
+      <a [routerLink]="['/category']">See All Categories </a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid security_sec ">
+  <div class=" text-center sec_icon"> <img src="../assets/images/Escow_Banner.jpg" alt="icon" class="w-100"> </div>
+  <div class="container">
+    <div class=" text-center sec_text">
+      <p class="common_p escrow_p">Our partnership with Escrow.com makes your project 100% safe with the most trusted and
+        licensed payment escrow in the world</p>
+    </div>
+    <div class="text-center Sec_btn">
+      <a href="">Let's Get Started </a>
+    </div>
+  </div>
+</div>
+
+ 
+<div class="container-fluid partner_sec ">
+  <div class="container">
+    <div class=" text-center sec_icon"> </div>
+    <div class=" text-center sec_text">
+      <h3> Get Your Projects Funded</h3>
+      <p class="common_p">Compare up to 5 personal loan offers from multiple lenders in minutes through</p>
+    </div>
+    <div class="text-center">
+      <a href="http://lendingtree.com" target="_blank"><img
+          src="../assets/images/lendingtree/LT_logo_2018_Gradient_White.png" width="273" height="100" alt="logo" /></a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid category_out testimonial_sec">
+  <div class="container">
+    <div class="text-center category_hd">
+      <h3>What Your neighbors </h3>
+      <h2> are saying about XpBids</h2>
+    </div>
+    <div class="container testimo-sec">
+      <div class="center slider responsive">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slickSlideConfig">
+          <div ngxSlickItem *ngFor="let item of items;" class="slide">
+            <div class="main_sec_test">
+              <div class="top_sec">
+                <p>{{item.content}}</p>
+              </div>
+              <div class="bottom_sec">
+                <span class="bottom_secR">
+                  <span class="text_name">{{item.name}}<br><span>{{item.location}}</span></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid video_sec">
+  <div class="container">
+    <h2 class="text-center">Watch <span>Videos</span> </h2>
+    <div class="vid row">
+      <div class="first_sec row">
+        <xb-video class="col-sm-6 col-md-6 col-lg-6 col-xl-6 first_sec_box" *ngFor="let video of videos | slice:0:4;"
+          [video]="video">
+        </xb-video>
+      </div>
+      <div class="second_sec row">
+        <div class="col-lg-12">
+          <xb-video class="" *ngFor="let video of videos | slice:12:13;" [video]="video"></xb-video>
+        </div>
+      </div>
+      <div class="text-center Sec_btn">
+        <a [routerLink]="['/videos']">See All Videos</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="progress_sec container-fluid">
+  <div class="container">
+    <div class=" text-center pro_text">
+      <h3> We empower you to track the</h3>
+      <h2>Progress of your project</h2>
+    </div>
+    <div class="text-center laptop_img">
+      <img src="../assets/images/laptop.png" alt="laptop_image" class="img-fluid">
+    </div>
+  </div>
+</div>
+
+<div class="trending_projects container-fluid">
+  <div class="container">
+    <div class=" text-center pro_text">
+      <h2>Trending Projects</h2>
+    </div>
+    <ul class="text-center">
+      <li>
+        <img src="../assets/images/trending_style1.png" width="30" height="30" alt="img">
+        <h5> {{trendingProject.newpost}} </h5>
+        <p class="common_p"> New Post</p>
+      </li>
+      <li>
+        <img src="../assets/images/trending_style2.png" width="31" height="31" alt="img">
+        <h5> {{trendingProject.inprogress}} </h5>
+        <p class="common_p">In Progress Post</p>
+      </li>
+      <li>
+        <img src="../assets/images/trending_style3.png" width="26" height="26" alt="img">
+        <h5> {{trendingProject.complete}} </h5>
+        <p class="common_p">Completed Post</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="blog_sec container-fluid">
+  <div class="container">
+    <div class="text-center category_hd">
+      <h3> From our </h3>
+      <h2>Lastest Blog</h2>
+    </div>
+    <div class="blog_part">
+      <owl-carousel [options]="carouselOptions">
+        <div *ngFor="let blog of blogs">
+          <div class="firt_blog">
+            <div class="img_sec">
+              <img src="{{blog.thumb}}" alt="profile">
+              <div class="hover_icons">
+                <ul>
+                  <li><a href={{blog.url}}> <img src="../assets/images/plus.png" alt="icon"> </a></li>
+                  <li><a href="#"> <img src="../assets/images/share.png" alt="icon"> </a></li>
+                </ul>
+              </div>
+            </div>
+            <a href={{blog.url}}>
+              <div class="blog-des">
+                <h5>{{blog.title}}</h5>
+                <div class="blg_icons">
+                  <div class="date"> </div>
+                  <p class="time_p">16 Nov, 2015</p>
+                  <div class="time"> </div>
+                  <p class="time_p">04:30 PM</p>
+                </div>
+                <p class="common_p">{{blog.description | limitTo:110}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </owl-carousel>
+    </div>
+  </div>
+</div>
+
+<div class="download_app">
+  <div class="container">
+    <div class="text-center download_hd">
+      <h3> Welcome to XpBids</h3>
+      <h2>Download our App it’s FREE</h2>
+      <p class="common_p">Now you can receive live bids</p>
+    </div>
+    <ul>
+      <li> <a href="#"> <img alt="pic" src="../assets/images/apple_store.png"></a></li>
+      <li> <a href="#"> <img alt="pic" src="../assets/images/google_play.png"></a></li>
+    </ul>
+  </div>
+</div>

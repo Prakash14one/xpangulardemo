@@ -1,0 +1,271 @@
+<header>
+    <div class="container-fluid header_top">
+        <div class="container">
+           <ul class="text-right m-0">
+              <li>
+                 <a routerLink="/faq" (click)="toggle('help')">Help</a>
+              </li>
+              <li>
+                 <a routerLink="/tutorial" (click)="toggle('tutorial')">View Tutorials </a>
+              </li>
+              <li class="pr-0">
+                 <a href="../index.html" class="logout"> Logout</a>
+              </li>
+           </ul>
+        </div>
+     </div>
+    <div class="container-fluid header_main">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="../index.html"><img src="../../../assets/images/logo.png" width="123"
+                        height="50" class="logo_for_desk" alt="logo">
+                    <img src="../../../assets/images/logo_small.png" width="45" height="34" class="logo_for_mobile"
+                        alt="logo"></a>
+                <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapsingNavbar">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div class="container-fluid term_top_sec" *ngIf='help'>
+                    <div class="container term_box">
+                      <ul>
+                        <li><a routerLink="/faq" >FAQ</a></li>
+                        <li><a routerLink="/howto" class="active">How To</a></li>
+                        <li><a routerLink="/useragreement">User Agreement &amp; Policy </a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="collapsingNavbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" [ngClass]="{'active' : post == true}" [routerLink]="['/consumer/post']" (click)="toggle('post')">My Posts </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Messages </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [ngClass]="{'active' : calendar == true}" [routerLink]="['/consumer/calendar']" (click)="toggle('calendar')">Calendar </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [ngClass]="{'active' : account == true}" [routerLink]="['/consumer/manageaccount']" (click)="toggle('account')">
+                                Manage Account </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [ngClass]="{'active' : payment == true}" [routerLink]="['/consumer/payment']" (click)="toggle('payment')"> Payment
+                            </a>
+                        </li>
+
+                        
+                        <li class="nav-item for_mobile_m">
+                            <a class="nav-link" href="help_faq.html">Help</a>q
+                        </li>
+                        <li class="nav-item for_mobile_m">
+                            <a class="nav-link" href="tutorial.html">View Tutorials</a>
+                        </li>
+                        <li class="nav-item for_mobile_m">
+                            <a class="nav-link" href="../index.html" class="logout"> Logout </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="rightMenu">
+                <li class="dropdown anim-drop Profile_sec dropdown-profile">
+                    <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle msg_icon"
+                        href="javascript:void(0)"><span></span></a>
+                    <ul class="dropdown-menu ">
+                        <li>
+                            <div class="notification-img">
+                                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                            </div>
+                            <div class="notification-msg">
+                                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="notification-img">
+                                <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+                            </div>
+                            <div class="notification-msg">
+                                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="notification-img">
+                                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                            </div>
+                            <div class="notification-msg">
+                                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>
+                                <a [routerLink]="['/consumer/messages']">View All Messages</a>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown anim-drop Profile_sec dropdown-profile">
+                    <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle notifi"
+                        href="javascript:void(0)"><span></span><span class="badge"><b>2</b></span> </a>
+                    <ul class="dropdown-menu dropdown-profile">
+                        <li>
+                            <div class="notification-img">
+                                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                            </div>
+                            <div class="notification-msg">
+                                <strong>Patric Nurela</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed minim veniam, 
+                                <span class="timer">14:15:56</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="notification-img">
+                                <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+                            </div>
+                            <div class="notification-msg">
+                                <strong>Patric Nurela</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed minim veniam, 
+                               <span class="timer">14:15:56</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="notification-img">
+                                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                            </div>
+                            <div class="notification-msg">
+                                <strong>Patric Nurela</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed minim veniam, 
+                                <span class="timer">14:15:56</span>
+                            </div>
+                        </li>
+                        <li>
+                            <p>
+                                <a [routerLink]="['/consumer/view_notifications']">View All Notifications</a>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown anim-drop Profile_sec">
+                    <a aria-expanded="false" class="Profile_icon" href="javascript:void(0)">J</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id='popup' *ngIf='check'>
+        <strong>Warning</strong> This alert box could indicate a warning that might need attention.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <!-- <xb-consumer-nav-header></xb-consumer-nav-header> -->
+    <div class="container-fluid term_top_sec">
+        <div class="container term_box">
+
+            <nav class="navbar navbar-expand-lg navbar-light navbar_bottom">
+                <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapsingNavbar_1">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsingNavbar_1">
+                    <ul class="navbar-nav mr-auto" *ngIf='post'>
+                        <li class="nav-item" (click)='Toggle(my_post)'>
+                            <a [routerLink]="['/consumer/post']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : my_post == true}">My Posts</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(bids)'>
+                            <a [routerLink]="['/consumer/managebids']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : bids == true}">Manage Bids</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(manage_posts)'>
+                            <a [routerLink]="['/consumer/manageposts']" [routerLinkActive]="['active-link']"
+                            class="nav-link" [ngClass]="{'active' : manage_posts == true}">Manage Posts</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(activeprojects)'>
+                            <a [routerLink]="['/consumer/activeprojects']" [routerLinkActive]="['active-link']"
+                            class="nav-link" [ngClass]="{'active' : activeprojects  == true}">Active Projects</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(completed)'>
+                            <a [routerLink]="['/consumer/completedprojects']" [routerLinkActive]="['active-link']"
+                            class="nav-link" [ngClass]="{'active' : completed == true}">Completed Projects</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav mr-auto" *ngIf='account'>
+                        <li class="nav-item" (click)='Toggle(personal)'>
+                            <a [routerLink]="['/consumer/manageaccount']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : personal == true}">Personal</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(passowrd)'>
+                            <a [routerLink]="['/consumer/managepassword']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : passowrd == true}">Password</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-auto" *ngIf='payment'>
+                        <!-- <li class="nav-item" (click)='Toggle(method)'>
+                            <a [routerLink]="['/consumer/payment']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : method == true}">Payments Method</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(manage_pass)'>
+                            <a [routerLink]="['/consumer/managepassword']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : manage_pass == true}">Refunded Amounts</a>
+                        </li> -->
+                        <li class="nav-item" (click)='Toggle(esig)'>
+                            <a [routerLink]="['/consumer/e_sig']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : esig == true}">E-Signature</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(resolution)'>
+                            <a [routerLink]="['/consumer/resolutioncenter']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : resolution == true}">Resolution Center</a>
+                        </li>
+                        <li class="nav-item" (click)='Toggle(history)'>
+                            <a [routerLink]="['/consumer/history']" [routerLinkActive]="['active-link']"
+                                class="nav-link" [ngClass]="{'active' : history == true}">History</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="serach_post">
+                    <!-- <form class="form_top">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+              </form> -->
+                </div>
+                <div class="btn-group grid_btns" role="group" aria-label="Basic example" *ngIf='calendar == false'>
+                    <a (click)='Card()' id="list" class="btn btn-default btn-sm grid" [class.active]="!isGridView"></a>
+                    <a (click)='Grid()' id="grid" class="btn btn-default btn-sm" [class.active]="isGridView"></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <br>
+    <div *ngIf='calendar == false'>
+        <div class="container create_new_box">
+            <div class="row">
+                <div class="col-6">
+                    <div class="create_new_post">
+                        <a [routerLink]="['/consumer/new-post']">Create New Post</a>
+                    </div>
+                </div>
+                <div class="col-6 text-right">
+                    <span class="financing_available_from">
+                        Need Financing? Compare Personal Loans For Home Improvement:
+                        <a href="lendingtree.com" class="logo_f" target="_blank">
+                            <img src="../assets/images/lendingtree/LT_logo_2018_Gradient_White.png" width="99"
+                                height="30" alt="logo" />
+                        </a>
+                        <!-- <a href="upstart.com" class="logo_f" target="_blank">
+                    <img src="../assets/images/upstartlogo.png" width="156" height="30" alt="logo" />
+                  </a>
+                  <a href="sofi.com" class="logo_f" target="_blank">
+                    <img src="../assets/images/SoFi_logo_white.png" width="80" height="30" alt="logo" />
+                  </a> -->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

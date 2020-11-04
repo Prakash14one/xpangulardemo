@@ -1,0 +1,105 @@
+<div class="container">
+  <form [formGroup]='editForm' id="edit_Pro_from"
+    style="max-height: 700px;display: block;width: auto;overflow-y: auto;">
+    <div class="modal-header">
+      <h4 class="modal-title">Edit Profile</h4>
+      <button type="button" class="close" (click)="onNoClick()" data-dismiss='modal'>
+        <span aria-hidden="true">&times;</span> </button>
+    </div>
+    <div class="row profile_top_sec form-group">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="form_left">
+          <label class="text-uppercase">First name</label>
+          <input type="text" class="form-control text-uppercase" id="text1" placeholder="Steve"
+            formControlName='firstName' required>
+        </div>
+        <div class="form_left">
+          <label class="text-uppercase">Last name</label>
+          <input type="text" class="form-control text-uppercase" id="text2" placeholder="jones"
+            formControlName='lastName' required>
+        </div>
+        <div class="form_left">
+          <label class="text-uppercase">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="billjones@serviceprovider.com"
+            formControlName='email' required>
+        </div>
+        <div class="form_left">
+          <label class="text-uppercase">Company Name</label>
+          <input type="text" class="form-control" id="text4" placeholder="Bill's General Contracting"
+            formControlName='companyName' required>
+        </div>
+        <div class="form_left">
+          <label class="text-uppercase">Phone</label>
+          <input type="number" class="form-control" id="number" placeholder="614-555-1212" formControlName='phone'
+            required>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="profile_pic_box">
+          <img src="../../../../assets/images/profile_pic.jpg" alt="pic" class="img-fluid" id='img'>
+          <div class="upload_img" id='image'>
+            <input type="file" (change)='selectFile($event)'>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="form_left">
+          <label class="text-uppercase">Address 1</label>
+          <input type="text" class="form-control" id="text6" placeholder="123 Service Lane" formControlName='address1'
+            required>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="form_left">
+          <label class="text-uppercase">Address 2</label>
+          <input type="text" class="form-control" id="text7" placeholder="North facing" formControlName='address2'
+            required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="form_left">
+          <label class="text-uppercase">City</label>
+          <input type="text" class="form-control" id="text8" placeholder="Columbus" formControlName='city' required>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="form_left">
+          <label class="text-uppercase">State</label>
+          <input type="text" class="form-control" id="text9" placeholder="Ohia" formControlName='state' required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="form_left">
+          <label class="text-uppercase">Zip Code</label>
+          <input type="text" class="form-control" id="number" placeholder="43240" formControlName='zip' required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="form_left">
+          <label class="text-uppercase">Security Question</label>
+          <select class="selectpicker" formControlName='security'>
+            <option>What is your father's middle name?</option>
+            <option>What is your pet name?</option>
+            <option>What is your first phone number?</option>
+          </select>
+          <input type="text" class="form-control" id="text11" placeholder="Type Answer Here" formControlName='answer'
+            required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 account_btn_edit">
+        <a class="btn btn-primary show_pro" (click)='onSubmit()'>Update</a>
+        <a class="btn btn-primary blank show_pro" (click)="onNoClick()">Cancel</a>
+      </div>
+    </div>
+  </form>
+</div>

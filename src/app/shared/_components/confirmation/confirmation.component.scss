@@ -1,0 +1,19 @@
+@import '../../../../assets/scss/base/variables';
+@import '../../../../assets/scss/base/mixins';
+
+body {
+  background: #e4e4e4;
+}
+.message-modal-bx .mat-dialog-content {
+  padding: 25px;
+  margin: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+.message-modal-bx .mat-dialog-actions {
+  margin: 0;
+}
+.message-modal-bx .mat-dialog-actions button {
+  margin: 0 5px 0 0;
+}
+/*--------- END --------*/

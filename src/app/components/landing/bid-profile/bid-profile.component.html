@@ -1,0 +1,10 @@
+<div class="mat_header"> <h4 _ngcontent-c7="" class="modal-title"></h4><button type="button" class="close" (click)="onNoClick()" data-dismiss="modal"></button></div>
+<div class="modal-body profile_sec text-center">
+  <div class="pro_1" *ngIf="bidDetail.image.content!=undefined"><img  [src]="'data:image/png;base64,'+bidDetail.image.content" alt="profile"></div>
+  <div class="des">
+    <h3>{{bidDetail.providerFirstName}} {{bidDetail.providerLastName}}<br>
+      <span>{{bidDetail.companyName}}</span>
+    </h3>
+    <p class="common_p">{{bidDetail.description}}</p>
+  </div>
+</div>

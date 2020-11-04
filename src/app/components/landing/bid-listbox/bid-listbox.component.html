@@ -1,0 +1,57 @@
+<div class="modal model_detail model_main" *ngIf="element !== undefined" style="display: block;" id="myModal">
+  <div class="modal-dialog ">
+      <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+              <h4 class="modal-title">Bid Details</h4>
+              <button type="button" class="close" (click)="onNoClick()" data-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body" >
+              <div class="main_box">
+                  <div class="main_box_head">
+                      <h2>{{element.title}}</h2>
+                      <label>{{element.category}}</label>
+                  </div>
+                  <div class="main_box_body">
+                      <div class="main_box_bodyL">
+                          <ul>
+                              <li>
+                                  <p>
+                                      Service Type : 
+                                      <span>{{element.serviceType}}</span>
+                                  </p>
+                                  <p>Posted on : <span style="display: inline;">{{element.postDate | date: 'yyyy-dd-MM'}}</span></p>
+                              </li>
+                              <li><p>Desired Start Date : <span> {{element.desiredRangeStart | date: 'yyyy-dd-MM'}}</span></p></li>
+
+
+                          </ul>
+                      </div>
+                      <div class="main_box_bodyR">
+                          <p>{{element.id}}</p>
+                          <strong>Amount </strong>
+                      </div>
+                      <div class="main_box_bodyFull">
+                          <p class="loc">{{element.description}}</p>
+                          <!-- <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed minim veniam, quis consectetur adipiscing elit, sed minim eniam dolor sit amet, consectetur adipiscing elit, sed minim veniam, quis consectetur adipiscing elit, sed minim eniamdolor sit amet, consectetur adipiscing elit, sed minim veniam.
+                              , quis consectetur adipiscing elit, sed minim eniam
+                          </p> -->
+                          <ul *ngFor="let res of imageResults">
+                              <li><a href="#"><img width="200px" height="200px" alt="pic" [src]="'data:image/png;base64,'+res.content"></a> </li>
+                              <!-- <li><a href="#"><img alt="pic" src="assets/images/pop_img2.jpg"></a> </li>
+                               -->
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="main_box_foot">
+                      <!-- <a href="#" class="btn email">View all message</a> -->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

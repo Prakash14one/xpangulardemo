@@ -1,0 +1,11 @@
+<div class="message-modal-bx">
+  <mat-dialog-content style="width:500px;height: auto;">
+    <p style="text-align: left;">
+      {{message}}
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="center">
+    <button class="btn btn-primary" mat-raised-button color="primary" (click)="onConfirmClick()" tabindex="1">{{confirmButtonText}}</button>
+    <button class="btn btn-primary" [hidden]="!show" mat-raised-button mat-dialog-close tabindex="-1">{{cancelButtonText}}</button>
+  </mat-dialog-actions>
+</div>

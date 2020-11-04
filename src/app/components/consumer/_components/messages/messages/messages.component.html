@@ -1,0 +1,72 @@
+<div class="container-fluid message_sec" *ngIf="pageData$ | async as pageData">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer mode="over" position="end">
+      <!-- <xb-message-details
+        [messages]="messages$ | async"
+        [project]="activeProject"
+        (reload)="reloadMessages()"
+      ></xb-message-details> -->
+    </mat-drawer>
+
+    <div class="container">
+      <div class="row top_search">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <p>{{ pageData.totalCount }} project(s)</p>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <form class="form_top">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              ></button>
+            </form>
+        </div>
+      </div>
+      <div class="row msg_list">
+        <div
+          class="msg_box"
+          (click)="getMessages(item, drawer)"
+          *ngFor="let item of pageData.results"
+        >
+          <a href="javascript:;"> {{ item.title }}</a>
+          <label> {{ item.lastUpdated }}</label>
+          <span class="icon"></span>
+        </div>
+      </div>
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li
+            class="page-item"
+            *ngFor="let link of pageData.links; let i = index"
+          >
+            <a class="page-link" (click)="goto(i + 1)">{{ i + 1 }}</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="row recent_file">
+          <h3>Recent files</h3>
+          <ul>
+            <li>
+              <img src="../images/file1.jpg" alt="img" class="img-fluid" /><span
+                >Dell Laptop.jpg</span
+              >
+            </li>
+            <li class="doc"><span>Notification.docx</span></li>
+            <li class="doc"><span>Laptoprepair.docx</span></li>
+            <li>
+              <img src="../images/file2.jpg" alt="img" class="img-fluid" /><span
+                >Toshiba Laptop.jpg</span
+              >
+            </li>
+            <li class="doc"><span>Laptoprepair.docx</span></li>
+          </ul>
+        </div>
+    </div>
+  </mat-drawer-container>
+</div>

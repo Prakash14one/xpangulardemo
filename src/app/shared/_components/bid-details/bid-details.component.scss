@@ -1,0 +1,34 @@
+@media (max-width: 600px) {
+    // Making the modal fullscreen in mobiles
+    .cdk-overlay-pane {
+      width: 100vw !important;
+      height: 150vh !important;
+    }
+  }
+  .mat-dialog-content {
+    display: block;
+    margin: 0 -24px;
+    padding: 0 24px;
+    max-height: 65vh;
+    // overflow-y: auto;
+  }
+  .btn-group button {
+    background-color: #ff5312; /* Green background */
+    border: 1px solid #ff5312; /* Green border */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    margin-right:10px;
+    border-radius:4px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 135px;
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }

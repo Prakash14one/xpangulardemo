@@ -1,0 +1,1825 @@
+/* border-radius */
+/* border-bottom-radius */
+/* border-top-radius */
+/* border-top-radius */
+/* Placeholder */
+/* @include placeholder {
+    font-style:italic;
+    color: white;
+    font-weight:100;
+} */
+/* Box Sizing */
+/* box-shadow */
+/* breakpoints */
+/* Retina */
+/* transition */
+/* ===== transformation ===== */
+/* rotate */
+/* scale */
+/* translate */
+/* skew */
+/* transform origin */
+/* ===== transformation Ends ===== */
+/* ===== Linear Gradients ===== */
+/* ===== Linear Gradients Ends ===== */
+/* Fonts*/
+/* color */
+/* line 1, ../scss/base/_base.scss */
+body {
+    background: #f5f5f5;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  /* line 9, ../scss/base/_base.scss */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+  }
+  
+  /* line 12, ../scss/base/_base.scss */
+  :focus {
+    outline: none;
+  }
+  
+  /* line 15, ../scss/base/_base.scss */
+  a:focus {
+    outline: none;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+  }
+  
+  /* line 20, ../scss/base/_base.scss */
+  .container {
+    max-width: 1200px;
+  }
+  
+  /* line 23, ../scss/base/_base.scss */
+  a {
+    text-decoration: none;
+  }
+  
+  /* line 26, ../scss/base/_base.scss */
+  .bootstrap-select.btn-group .dropdown-menu.inner {
+    display: block;
+  }
+  
+  /* line 29, ../scss/base/_base.scss */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* line 33, ../scss/base/_base.scss */
+  input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 33, ../scss/base/_base.scss */
+    input, textarea {
+      font-size: 14px !important;
+    }
+  }
+  
+  /* line 42, ../scss/base/_base.scss */
+  // .bootstrap-select .dropdown-toggle {
+  //   /* 767 px*/
+  // }
+  @media (max-width: 767px) {
+    /* line 42, ../scss/base/_base.scss */
+    .bootstrap-select .dropdown-toggle {
+      font-size: 14px !important;
+    }
+  }
+  
+  /* line 48, ../scss/base/_base.scss */
+  .bootstrap-select {
+    width: 100% !important;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  /* line 51, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-toggle {
+    background: transparent !important;
+    color: #999999 !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px !important;
+    border: 0px;
+    line-height: 40px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 0px !important;
+  }
+  /* line 62, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-toggle:focus, .bootstrap-select .dropdown-toggle.active, .bootstrap-select .dropdown-toggle:hover {
+    outline: none;
+    border: 0px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.18) !important;
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.18) !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+  }
+  /* line 68, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-toggle:before {
+    position: absolute;
+    background: url(../../../../../assets/images/select_bg.png) no-repeat;
+    width: 11px;
+    height: 12px;
+    bottom: -1px;
+    right: 0;
+    background-size: 100%;
+    content: "";
+  }
+  /* line 78, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-toggle:after {
+    display: none !important;
+  }
+  /* line 82, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-menu {
+    padding: 0;
+    background: #fff;
+    z-index: 7;
+  }
+  /* line 86, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-menu ul {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    padding: 2px 0;
+  }
+  /* line 89, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-menu ul li {
+    border-bottom: 1px solid #cccccc;
+    padding: 0 !important;
+  }
+  /* line 92, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-menu ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999 !important;
+    padding: 9px 10px 9px 10px;
+    display: block;
+    border-bottom: 0 !important;
+  }
+  /* line 99, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-menu ul li a span {
+    line-height: normal;
+    font-weight: 400;
+  }
+  /* line 103, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-menu ul li a:hover {
+    background: #f5f5f5 !important;
+    color: #888 !important;
+  }
+  /* line 108, ../scss/base/_base.scss */
+  .bootstrap-select .dropdown-menu ul li:last-child {
+    border-bottom: 0;
+  }
+  
+  /* line 115, ../scss/base/_base.scss */
+  .term_top_sec {
+    background: #fff;
+    border-top: 1px solid #d5d5d5;
+    -webkit-box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 14px 0px rgba(0, 0, 0, 0.15);
+    /* 1242 px*/
+  }
+  @media (max-width: 1200px) {
+    /* line 115, ../scss/base/_base.scss */
+    .term_top_sec {
+      padding-left: 0;
+      padding-right: 0;
+      min-height: 62px;
+      height: auto;
+    }
+  }
+  /* line 125, ../scss/base/_base.scss */
+  .term_top_sec .term_box {
+    position: relative;
+  }
+  /* line 127, ../scss/base/_base.scss */
+  .term_top_sec .term_box ul {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+  }
+  /* line 131, ../scss/base/_base.scss */
+  .term_top_sec .term_box ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  /* line 136, ../scss/base/_base.scss */
+  .term_top_sec .term_box ul li a {
+    font-size: 15px;
+    color: #d5d5d5;
+    float: left;
+    padding: 20px 20px 14px 20px !important;
+    text-decoration: none;
+    position: relative;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 136, ../scss/base/_base.scss */
+    .term_top_sec .term_box ul li a {
+      padding: 20px 10px 14px 10px !important;
+    }
+  }
+  /* line 146, ../scss/base/_base.scss */
+  .term_top_sec .term_box ul li a:after {
+    position: absolute;
+    bottom: -5px;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 2px;
+    border-bottom: 2px solid transparent;
+  }
+  /* line 155, ../scss/base/_base.scss */
+  .term_top_sec .term_box ul li a:hover, .term_top_sec .term_box ul li a.active {
+    color: #ff5312 !important;
+  }
+  /* line 157, ../scss/base/_base.scss */
+  .term_top_sec .term_box ul li a:hover:after, .term_top_sec .term_box ul li a.active:after {
+    border-bottom: 2px solid #ff5312;
+  }
+  /* line 164, ../scss/base/_base.scss */
+  .term_top_sec .term_box .grid_btns {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 80px;
+    height: 32px;
+    border: 1px solid #d5d5d5;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+  }
+  /* line 172, ../scss/base/_base.scss */
+  .term_top_sec .term_box .grid_btns a {
+    float: left;
+    width: 50% !important;
+    border-right: 0;
+    -webkit-border-radius: 0 15px 15px 0 !important;
+    -moz-border-radius: 0 15px 15px 0 !important;
+    -ms-border-radius: 0 15px 15px 0 !important;
+    border-radius: 0 15px 15px 0 !important;
+  }
+  /* line 177, ../scss/base/_base.scss */
+  .term_top_sec .term_box .grid_btns a:before {
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    content: "";
+    background: url(../../../../../assets/images/grid_icon.png) no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 13px;
+    transform: translate(-50%);
+  }
+  /* line 189, ../scss/base/_base.scss */
+  .term_top_sec .term_box .grid_btns a.grid {
+    border-right: 1px solid #d5d5d5 !important;
+    -webkit-border-radius: 15px 0 0 15px !important;
+    -moz-border-radius: 15px 0 0 15px !important;
+    -ms-border-radius: 15px 0 0 15px !important;
+    border-radius: 15px 0 0 15px !important;
+  }
+  /* line 192, ../scss/base/_base.scss */
+  .term_top_sec .term_box .grid_btns a.grid:before {
+    background: url(../../../../../assets/images/list_icon.png) no-repeat;
+    width: 14px;
+    height: 14px;
+    background-size: 100%;
+  }
+  /* line 199, ../scss/base/_base.scss */
+  .term_top_sec .term_box .grid_btns a:focus, .term_top_sec .term_box .grid_btns a:hover, .term_top_sec .term_box .grid_btns a.active {
+    background: #ff5312;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+  }
+  /* line 202, ../scss/base/_base.scss */
+  .term_top_sec .term_box .grid_btns a:focus:before, .term_top_sec .term_box .grid_btns a:hover:before, .term_top_sec .term_box .grid_btns a.active:before {
+    background-position: bottom left;
+  }
+  
+  /* line 210, ../scss/base/_base.scss */
+  .form-control:focus {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* line 213, ../scss/base/_base.scss */
+  .page-link:focus {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* line 218, ../scss/base/_base.scss */
+  .input-group input {
+    text-align: center !important;
+  }
+  
+  /* line 222, ../scss/base/_base.scss */
+  .btn-number {
+    background: none;
+    border: 0px;
+    font-style: 500;
+  }
+  /* line 226, ../scss/base/_base.scss */
+  .btn-number.btn_l {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    z-index: 15;
+  }
+  /* line 232, ../scss/base/_base.scss */
+  .btn-number.btn_r {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 16;
+  }
+  /* line 238, ../scss/base/_base.scss */
+  .btn-number i {
+    font-style: normal;
+    font-size: 14px;
+    color: #8f8f8f;
+    font-family: fontawesome;
+    font-weight: 400;
+  }
+  /* line 244, ../scss/base/_base.scss */
+  .btn-number i:before {
+    color: #8f8f8f !important;
+  }
+  /* line 248, ../scss/base/_base.scss */
+  .btn-number i:hover:before, .btn-number i:focus:before {
+    color: #ff5312 !important;
+  }
+  
+  /* line 254, ../scss/base/_base.scss */
+  button:focus {
+    outline: none;
+  }
+  
+  @media only screen and (max-width: 767px), (min-device-width: 768px) and (max-device-width: 991px) {
+    /* line 7, ../scss/base/_responsive-table.scss */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+  
+    /* line 10, ../scss/base/_responsive-table.scss */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    /* line 15, ../scss/base/_responsive-table.scss */
+    tr {
+      border: 1px solid #e9e9e9;
+      margin-bottom: 15px;
+    }
+    /* line 18, ../scss/base/_responsive-table.scss */
+    tr:last-child {
+      margin-bottom: 0 !important;
+    }
+  
+    /* line 22, ../scss/base/_responsive-table.scss */
+    .table-striped > tbody > tr:nth-of-type(2n+1) {
+      background-color: #ebebeb;
+    }
+  
+    /* line 25, ../scss/base/_responsive-table.scss */
+    td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    /* line 30, ../scss/base/_responsive-table.scss */
+    table tr td {
+      text-align: left !important;
+      padding-left: 18px !important;
+      position: relative;
+    }
+  
+    /* line 35, ../scss/base/_responsive-table.scss */
+    table tr td br {
+      display: none;
+    }
+  
+    /* line 38, ../scss/base/_responsive-table.scss */
+    table tr:first-child {
+      display: none !important;
+    }
+  
+    /* line 41, ../scss/base/_responsive-table.scss */
+    table tr td:before {
+      top: 0px;
+      left: 0px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+      color: #333;
+      position: relative;
+    }
+  }
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* line 59, ../scss/base/_responsive-table.scss */
+    body {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* line 70, ../scss/base/_responsive-table.scss */
+    body {
+      width: 100%;
+    }
+  }
+  /* line 1, ../scss/pages/_payment.scss */
+  body {
+    background: #e4e4e4;
+  }
+  
+  /* line 4, ../scss/pages/_payment.scss */
+  .payment_Sec {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* 1242 px*/
+    /* 767 px*/
+  }
+  @media (max-width: 1200px) {
+    /* line 4, ../scss/pages/_payment.scss */
+    .payment_Sec {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 767px) {
+    /* line 4, ../scss/pages/_payment.scss */
+    .payment_Sec {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  /* line 18, ../scss/pages/_payment.scss */
+  .payment_Sec .setting_top h3 {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: -5px;
+    margin-bottom: 37px;
+    /* 1242 px*/
+    /* 767 px*/
+  }
+  @media (max-width: 1200px) {
+    /* line 18, ../scss/pages/_payment.scss */
+    .payment_Sec .setting_top h3 {
+      margin-top: -25px;
+      margin-bottom: 25px;
+    }
+  }
+  @media (max-width: 767px) {
+    /* line 18, ../scss/pages/_payment.scss */
+    .payment_Sec .setting_top h3 {
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+  }
+  /* line 35, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box {
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    padding: 30px 30px 25px 30px;
+    min-height: 580px;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 35, ../scss/pages/_payment.scss */
+    .payment_Sec .payment_Sec_box {
+      padding: 15px 15px 25px 15px;
+      min-height: 100px;
+    }
+  }
+  /* line 44, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box ul {
+    margin: 0 auto;
+    border: 1px solid#dedede;
+    margin-top: 33px;
+    max-width: 719px;
+    width: 100%;
+    background: #dedede;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    margin-bottom: 55px;
+  }
+  /* line 53, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box ul li {
+    background: #dedede;
+  }
+  /* line 55, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box ul li a {
+    text-align: center;
+    padding: 18px;
+    color: #7a7a7a;
+    display: block;
+    padding: 15px 50px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    text-decoration: none;
+  }
+  /* line 63, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box ul li a:hover, .payment_Sec .payment_Sec_box ul li a.active {
+    background: #f45117;
+    color: #fff;
+  }
+  /* line 68, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box ul li:first-child {
+    -webkit-border-radius: 30px 0 0 30px;
+    -moz-border-radius: 30px 0 0 30px;
+    -ms-border-radius: 30px 0 0 30px;
+    border-radius: 30px 0 0 30px;
+  }
+  /* line 71, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box ul li:last-child {
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    -ms-border-radius: 0 30px 30px 0;
+    border-radius: 0 30px 30px 0;
+  }
+  /* line 77, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box .responsive-tabs-container .tab-content {
+    width: 100%;
+  }
+  /* line 79, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box .responsive-tabs-container .tab-content a.accordion-link {
+    font-size: 15px;
+    color: #333333 !important;
+    padding: 11px 15px 11px 0;
+    border-bottom: 2px solid #d9d9d9;
+    text-decoration: none;
+    position: relative;
+  }
+  /* line 86, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box .responsive-tabs-container .tab-content a.accordion-link:before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 27px;
+    height: 14px;
+    background: url(../../../../../assets/images/footer-accordion.png) 0 -14px no-repeat;
+  }
+  /* line 96, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box .responsive-tabs-container .tab-content a.accordion-link.active {
+    border-bottom: 2px solid #f45117;
+    color: #0086dd;
+  }
+  /* line 99, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box .responsive-tabs-container .tab-content a.accordion-link.active:before {
+    background-position: 0 0;
+  }
+  /* line 107, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box form {
+    text-align: center;
+    margin-top: 9px;
+    display: flow-root;
+  }
+  /* line 111, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box form .form-group {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 111, ../scss/pages/_payment.scss */
+    .payment_Sec .payment_Sec_box form .form-group {
+      margin-top: 0;
+    }
+  }
+  /* line 118, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box form .form-group input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #d9d9d9;
+    color: #7a7a7a;
+    font-size: 14px;
+    outline: 0;
+    line-height: 40px;
+    padding: 5px 20px 0px 0px;
+    text-align: left;
+    transition: all 0.3s;
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+  }
+  /* line 131, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box form .form-group input.card {
+    background: url(../../../../../assets/images/card_icon.png) 98% 8px no-repeat;
+    background-size: 23px 18px;
+  }
+  /* line 135, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box form .form-group input:focus, .payment_Sec .payment_Sec_box form .form-group input:hover {
+    border-bottom: 1px solid #000;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+  }
+  /* line 43, ../scss/base/_mixins.scss */
+  .payment_Sec .payment_Sec_box form .form-group input::-webkit-input-placeholder {
+    color: #787878 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+  }
+  /* line 44, ../scss/base/_mixins.scss */
+  .payment_Sec .payment_Sec_box form .form-group input::-moz-placeholder {
+    color: #787878 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+  }
+  /* line 45, ../scss/base/_mixins.scss */
+  .payment_Sec .payment_Sec_box form .form-group input::-moz-placeholder {
+    color: #787878 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+  }
+  /* line 46, ../scss/base/_mixins.scss */
+  .payment_Sec .payment_Sec_box form .form-group input::-ms-input-placeholder {
+    color: #787878 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+  }
+  /* line 149, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box form .btn {
+    border: 0px solid #fff;
+    margin-top: 10px;
+    background: #f45117;
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 11px 31px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 800ms ease-out;
+    position: relative;
+    margin-right: 20px;
+  }
+  /* line 164, ../scss/pages/_payment.scss */
+  .payment_Sec .payment_Sec_box form .btn.blank {
+    background: #e5e5e5;
+    color: #7a7a7a;
+    margin-right: 0;
+  }
+  
+  /* line 173, ../scss/pages/_payment.scss */
+  .bootstrap-select {
+    width: 48% !important;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 173, ../scss/pages/_payment.scss */
+    .bootstrap-select {
+      width: 100% !important;
+      margin-bottom: 15px !important;
+    }
+  }
+  /* line 179, ../scss/pages/_payment.scss */
+  .bootstrap-select:last-child {
+    float: right !important;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 179, ../scss/pages/_payment.scss */
+    .bootstrap-select:last-child {
+      width: 100% !important;
+      margin-bottom: 0px !important;
+    }
+  }
+  /* line 187, ../scss/pages/_payment.scss */
+  .bootstrap-select .dropdown-menu ul {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    padding: 2px 0;
+  }
+  /* line 190, ../scss/pages/_payment.scss */
+  .bootstrap-select .dropdown-menu ul li {
+    border-bottom: 1px solid #cccccc;
+    padding: 0 !important;
+  }
+  /* line 193, ../scss/pages/_payment.scss */
+  .bootstrap-select .dropdown-menu ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #999999 !important;
+    padding: 5px 10px 5px 10px;
+    display: block;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    border-bottom: 0 !important;
+  }
+  /* line 201, ../scss/pages/_payment.scss */
+  .bootstrap-select .dropdown-menu ul li a:hover {
+    background: #f5f5f5 !important;
+    color: #888 !important;
+  }
+  /* line 206, ../scss/pages/_payment.scss */
+  .bootstrap-select .dropdown-menu ul li:first-child {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+  }
+  /* line 209, ../scss/pages/_payment.scss */
+  .bootstrap-select .dropdown-menu ul li:last-child {
+    border-bottom: 0;
+  }
+  
+  /* line 217, ../scss/pages/_payment.scss */
+  .saved_card h3 {
+    font-size: 20px;
+    color: #7a7a7a;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    display: flow-root;
+  }
+  /* line 224, ../scss/pages/_payment.scss */
+  .saved_card h3 a {
+    border: 0px solid #fff;
+    margin-top: 10px;
+    background: #e5e5e5;
+    float: right;
+    font-size: 14px;
+    color: #7a7a7a;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 14px 29px 14px 47px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 800ms ease-out;
+    position: relative;
+    margin-top: -12px;
+  }
+  /* line 239, ../scss/pages/_payment.scss */
+  .saved_card h3 a:before {
+    background: url(../../../../../assets/images/plus_icon.png) no-repeat;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    content: "";
+    background-size: 100%;
+    transform: translateY(-50%);
+  }
+  /* line 252, ../scss/pages/_payment.scss */
+  .saved_card .card_box {
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  /* line 259, ../scss/pages/_payment.scss */
+  .saved_card .card_box .card_icon {
+    float: left;
+    max-width: 96px;
+    text-align: center;
+    width: 100%;
+  }
+  /* line 265, ../scss/pages/_payment.scss */
+  .saved_card .card_box p {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #7a7a7a;
+    margin: 10px 0;
+  }
+  /* line 270, ../scss/pages/_payment.scss */
+  .saved_card .card_box p span {
+    color: #3c3c3c;
+  }
+  /* line 274, ../scss/pages/_payment.scss */
+  .saved_card .card_box p {
+    float: left;
+    width: calc(100% - 170px);
+  }
+  /* line 278, ../scss/pages/_payment.scss */
+  .saved_card .card_box .card_action {
+    float: right;
+    text-align: right;
+  }
+  /* line 281, ../scss/pages/_payment.scss */
+  .saved_card .card_box .card_action a {
+    position: relative;
+    width: 15px;
+    float: left;
+    height: 20px;
+    margin-left: 10px;
+  }
+  /* line 287, ../scss/pages/_payment.scss */
+  .saved_card .card_box .card_action a:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 15px;
+    height: 19px;
+    background: url(../../../../../assets/images/delete_icon.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 298, ../scss/pages/_payment.scss */
+  .saved_card .card_box .card_action a.edit:before {
+    background: url(../../../../../assets/images/edit_icon.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 304, ../scss/pages/_payment.scss */
+  .saved_card .card_box .card_action a:hover:before {
+    background-position: bottom left;
+  }
+  
+  /* line 312, ../scss/pages/_payment.scss */
+  .table_sec {
+    background: #fefefe;
+    -webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    /* 991 px*/
+  }
+  @media (max-width: 991px) {
+    /* line 312, ../scss/pages/_payment.scss */
+    .table_sec {
+      background: transparent;
+      -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+  /* line 319, ../scss/pages/_payment.scss */
+  .table_sec th {
+    padding: 14px 15px;
+    background: #f45117;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    /* 991 px*/
+  }
+  @media (max-width: 991px) {
+    /* line 319, ../scss/pages/_payment.scss */
+    .table_sec th {
+      background: #fff;
+    }
+  }
+  /* line 330, ../scss/pages/_payment.scss */
+  .table_sec td {
+    padding: 18px 15px 20px 15px;
+    color: #7a7a7a;
+    border-bottom: 1px solid #e9e9e9;
+    font-weight: 400;
+    font-size: 13px;
+    /* 991 px*/
+  }
+  @media (max-width: 991px) {
+    /* line 330, ../scss/pages/_payment.scss */
+    .table_sec td {
+      background: #fff;
+    }
+  }
+  
+  /* line 341, ../scss/pages/_payment.scss */
+  .pagination {
+    margin-top: 30px;
+    justify-content: right;
+    margin-bottom: 20px;
+  }
+  /* line 346, ../scss/pages/_payment.scss */
+  .pagination li a {
+    background: #d4d4d4 !important;
+    color: #929292;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 10px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    border: 0px;
+    height: 33px;
+    width: 33px;
+    text-align: center;
+    padding-top: 8px;
+  }
+  /* line 358, ../scss/pages/_payment.scss */
+  .pagination li a.pre {
+    position: relative;
+  }
+  /* line 360, ../scss/pages/_payment.scss */
+  .pagination li a.pre:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 7px;
+    height: 12px;
+    background: url(../../../../../assets/images/arrow_left.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 371, ../scss/pages/_payment.scss */
+  .pagination li a.pre:hover:before {
+    background-position: bottom left;
+  }
+  /* line 376, ../scss/pages/_payment.scss */
+  .pagination li a.next {
+    position: relative;
+  }
+  /* line 378, ../scss/pages/_payment.scss */
+  .pagination li a.next:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    width: 7px;
+    height: 12px;
+    background: url(../../../../../assets/images/arrow_right.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 389, ../scss/pages/_payment.scss */
+  .pagination li a.next:hover:before {
+    background-position: bottom left;
+  }
+  /* line 394, ../scss/pages/_payment.scss */
+  .pagination li a:first-child, .pagination li a:last-child {
+    border-radius: 25px !important;
+  }
+  /* line 397, ../scss/pages/_payment.scss */
+  .pagination li a:hover, .pagination li a.active {
+    background: #f45117 !important;
+    color: #fff;
+  }
+  
+  /* line 404, ../scss/pages/_payment.scss */
+  .table_actions {
+    position: relative;
+  }
+  /* line 406, ../scss/pages/_payment.scss */
+  .table_actions a {
+    position: relative;
+    width: 15px;
+    display: inline-block;
+    height: 20px;
+    margin-left: 10px;
+  }
+  /* line 412, ../scss/pages/_payment.scss */
+  .table_actions a:before {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    content: "";
+    width: 17px;
+    height: 10px;
+    background: url(../../../../../assets/images/preview_icon.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 423, ../scss/pages/_payment.scss */
+  .table_actions a.edit:before {
+    top: 0px;
+    width: 15px;
+    height: 19px;
+    background: url(../../../../../assets/images/edit_icon.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 432, ../scss/pages/_payment.scss */
+  .table_actions i#sig:before {
+    display:inline-block;    
+    top: 2px;
+    width: 16px;
+    height: 15px;
+    background-size: 100%;
+    // background: url(../../../../../assets/images/signing-a-contract.png) no-repeat;
+    margin-left: 15px;
+  }
+  /* line 441, ../scss/pages/_payment.scss */
+  .table_actions a:hover:before {
+    background-position: bottom left;
+  }
+  
+  /* line 448, ../scss/pages/_payment.scss */
+  .main_boxes {
+    padding: 10px 0 45px 0;
+    margin-left: 0;
+    margin-right: 0;
+    /* 1242 px*/
+  }
+  @media (max-width: 1200px) {
+    /* line 448, ../scss/pages/_payment.scss */
+    .main_boxes {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  /* line 456, ../scss/pages/_payment.scss */
+  .main_boxes .main_box {
+    background: #fff;
+    margin-bottom: 40px;
+    -webkit-box-shadow: 0px 0px 7.68px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 7.68px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 7.68px rgba(0, 0, 0, 0.3);
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 456, ../scss/pages/_payment.scss */
+    .main_boxes .main_box {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  /* line 467, ../scss/pages/_payment.scss */
+  .main_boxes .main_box:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 470, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_head {
+    padding: 23px 22px 6px 22px;
+    background: #f7f9fa;
+    border-bottom: 1px solid #d9dadb;
+  }
+  /* line 474, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_head h2 {
+    font-size: 20px;
+    color: #ff5312;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  /* line 480, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_head label {
+    font-size: 14px;
+    color: #484848;
+  }
+  /* line 485, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body {
+    padding: 23px 22px 14px 22px;
+    background: #f7f9fa;
+    border-bottom: 1px solid #d9dadb;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  /* line 492, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyL {
+    float: left;
+    width: 50%;
+    /* 480 px*/
+  }
+  @media (max-width: 480px) {
+    /* line 492, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_body .main_box_bodyL {
+      width: 100%;
+    }
+  }
+  /* line 498, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyL p {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin-bottom: 10px;
+    line-height: 18px;
+  }
+  /* line 503, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyL p span {
+    color: #484848;
+    display: block;
+  }
+  /* line 509, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyR {
+    float: left;
+    width: 50%;
+    text-align: right;
+    /* 480 px*/
+  }
+  @media (max-width: 480px) {
+    /* line 509, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_body .main_box_bodyR {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+  /* line 518, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyR p {
+    font-size: 14px;
+    width: auto;
+    float: right;
+    color: #484848;
+    border: 1px solid #acacac;
+    padding: 4px 25px 5px 38px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    border-radius: 16px;
+    margin-bottom: 5px;
+    position: relative;
+    /* 480 px*/
+  }
+  @media (max-width: 480px) {
+    /* line 518, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_body .main_box_bodyR p {
+      float: left;
+    }
+  }
+  /* line 531, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyR p:before {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    content: "ID";
+    font-size: 13px;
+    font-weight: 700;
+    background: #ff5312;
+    text-align: center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    line-height: 24px;
+  }
+  /* line 547, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyR strong {
+    font-size: 16px;
+    float: right;
+    width: 100%;
+    color: #484848;
+  }
+  /* line 554, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyFull {
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  /* line 558, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyFull p {
+    font-size: 14px;
+    color: rgba(21, 21, 21, 0.8);
+    line-height: 20px;
+  }
+  /* line 562, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyFull p.loc {
+    color: #484848;
+    background: url(../../../../../assets/images/location_icon.png) 0px 2px no-repeat;
+    background-size: 12px 16px;
+    padding-left: 20px;
+    margin-bottom: 22px;
+  }
+  /* line 570, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyFull .slide_icon {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    background: #000;
+    position: absolute;
+    right: 0px;
+    bottom: -34px;
+  }
+  /* line 578, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .main_box_bodyFull .slide_icon:after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 17px;
+    left: 50%;
+    top: 11px;
+    transform: translate(-50%);
+    background: url(../../../../../assets/images/dots_after.png);
+    background-size: 100%;
+  }
+  /* line 592, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_foot {
+    padding: 25px 22px 23px 22px;
+    background: #ffffff;
+    float: left;
+    width: 100%;
+  }
+  /* line 597, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_foot a {
+    background: #e4e4e4;
+    font-size: 14px;
+    color: #1d1c1c;
+    border: 0px;
+    padding: 5px 20px 6px 20px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    border-radius: 16px;
+    margin-right: 9px;
+    /* 1024 px*/
+  }
+  @media (max-width: 1024px) {
+    /* line 597, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_foot a {
+      margin-bottom: 10px;
+    }
+  }
+  /* line 608, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_foot a.list {
+    position: relative;
+    padding: 5px 24px 6px 35px;
+  }
+  /* line 611, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_foot a.list:before {
+    position: absolute;
+    left: 16px;
+    top: 11px;
+    content: "";
+    background: url(../../../../../assets/images/msg_icon_2.png) no-repeat;
+    width: 13px;
+    height: 13px;
+    background-size: 100%;
+  }
+  /* line 622, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_foot a:hover, .main_boxes .main_box .main_box_foot a.active {
+    background: #ff5312;
+    color: #fff;
+    -webkit-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    -moz-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+  }
+  /* line 626, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_foot a:hover:before, .main_boxes .main_box .main_box_foot a.active:before {
+    background-position: bottom left;
+  }
+  /* line 633, ../scss/pages/_payment.scss */
+  .main_boxes .btn_bottom {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+  /* line 639, ../scss/pages/_payment.scss */
+  .main_boxes .btn_bottom a {
+    background: #ff5312;
+    margin-top: 30px;
+    display: inline;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 0px;
+    padding: 9px 22px 10px 22px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    border-radius: 24px;
+    -webkit-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    -moz-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+  }
+  
+  /* line 657, ../scss/pages/_payment.scss */
+  .top_search {
+    padding: 0px 0 14px 0;
+    display: flex;
+    /* 1242 px*/
+  }
+  @media (max-width: 1200px) {
+    /* line 657, ../scss/pages/_payment.scss */
+    .top_search {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+  /* line 664, ../scss/pages/_payment.scss */
+  .top_search p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 400;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 19px;
+    padding-top: 8px;
+  }
+  /* line 674, ../scss/pages/_payment.scss */
+  .top_search .form_top {
+    position: relative;
+    max-width: 168px;
+    float: right;
+    width: 100%;
+    background: #fff;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    /* 480 px*/
+  }
+  @media (max-width: 575px) {
+    /* line 674, ../scss/pages/_payment.scss */
+    .top_search .form_top {
+      max-width: 100%;
+    }
+  }
+  /* line 684, ../scss/pages/_payment.scss */
+  .top_search .form_top input {
+    border: 0px;
+    background: transparent;
+    width: calc(100% - 30px);
+    font-size: 13px;
+    color: #929292;
+  }
+  /* line 690, ../scss/pages/_payment.scss */
+  .top_search .form_top input:focus {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25);
+    -moz-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25);
+  }
+  /* line 43, ../scss/base/_mixins.scss */
+  .top_search .form_top input::-webkit-input-placeholder {
+    color: #929292;
+  }
+  /* line 44, ../scss/base/_mixins.scss */
+  .top_search .form_top input::-moz-placeholder {
+    color: #929292;
+  }
+  /* line 45, ../scss/base/_mixins.scss */
+  .top_search .form_top input::-moz-placeholder {
+    color: #929292;
+  }
+  /* line 46, ../scss/base/_mixins.scss */
+  .top_search .form_top input::-ms-input-placeholder {
+    color: #929292;
+  }
+  /* line 697, ../scss/pages/_payment.scss */
+  .top_search .form_top button {
+    padding: 0px !important;
+    margin: 0 !important;
+    border: 0px;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    width: 12px;
+    height: 12px;
+  }
+  /* line 706, ../scss/pages/_payment.scss */
+  .top_search .form_top button:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    content: "";
+    background: transparent url(../../../../../assets/images/search_icon.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 716, ../scss/pages/_payment.scss */
+  .top_search .form_top button:hover, .top_search .form_top button.active, .top_search .form_top button:active, .top_search .form_top button:focus {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25);
+    -moz-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25);
+    background: transparent;
+    border: 0px;
+  }
+  /* line 720, ../scss/pages/_payment.scss */
+  .top_search .form_top button:hover:before, .top_search .form_top button.active:before, .top_search .form_top button:active:before, .top_search .form_top button:focus:before {
+    background-position: left bottom;
+  }
+  
+  /* line 727, ../scss/pages/_payment.scss */
+  .action {
+    position: absolute;
+    right: 25px;
+    bottom: -20px;
+    width: 300px;
+    height: 40px;
+  }
+  /* line 733, ../scss/pages/_payment.scss */
+  .action.action_withP {
+    right: 76px !important;
+  }
+  /* line 736, ../scss/pages/_payment.scss */
+  .action .slide_icon {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+  }
+  /* line 745, ../scss/pages/_payment.scss */
+  .action .slide_icon:after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 17px;
+    left: 50%;
+    top: 11px;
+    transform: translate(-50%);
+    background: url(../../../../../assets/images/dots_after.png);
+    background-size: 100%;
+  }
+  /* line 757, ../scss/pages/_payment.scss */
+  .action .slide_list {
+    background: #ff5312;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: auto;
+    z-index: 4;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    padding: 12px 40px 0 0;
+    margin-right: 0;
+  }
+  /* line 768, ../scss/pages/_payment.scss */
+  .action .slide_list a {
+    position: relative;
+    width: 18px;
+    display: inline-block;
+    height: 20px;
+    margin-left: 16px;
+  }
+  /* line 774, ../scss/pages/_payment.scss */
+  .action .slide_list a:before {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    content: "";
+    width: 17px;
+    height: 10px;
+    background: url(../../../../../assets/images/preview_icon_w.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 785, ../scss/pages/_payment.scss */
+  .action .slide_list a.edit:before {
+    bottom: 0px;
+    width: 15px;
+    height: 19px;
+    background: url(../../../../../assets/images/edit.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 794, ../scss/pages/_payment.scss */
+  .action .slide_list a.msg:before {
+    top: 0px !important;
+    width: 17px;
+    height: 17px !important;
+    background: url(../../../../../assets/images/msg_icon_1w.png) no-repeat !important;
+    background-size: 100% !important;
+  }
+  /* line 803, ../scss/pages/_payment.scss */
+  .action .slide_list a:hover:before {
+    background-position: bottom left;
+  }
+  
+  /* line 811, ../scss/pages/_payment.scss */
+  .main_boxes {
+    padding: 0px 0 45px 0;
+    margin-left: 0;
+    margin-right: 0;
+    /* 1242 px*/
+  }
+  @media (max-width: 1200px) {
+    /* line 811, ../scss/pages/_payment.scss */
+    .main_boxes {
+      margin-left: 0px;
+      margin-right: 0px;
+      padding-bottom: 15px !important;
+    }
+  }
+  /* line 820, ../scss/pages/_payment.scss */
+  .main_boxes .main_box {
+    background: #fff;
+    margin-bottom: 40px;
+    -webkit-box-shadow: 0px 0px 7.68px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 7.68px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 7.68px rgba(0, 0, 0, 0.3);
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 820, ../scss/pages/_payment.scss */
+    .main_boxes .main_box {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  /* line 831, ../scss/pages/_payment.scss */
+  .main_boxes .main_box:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 834, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_head {
+    padding: 23px 22px 6px 22px;
+    background: #fff;
+    border-bottom: 1px solid #d9dadb;
+    /* 480 px*/
+  }
+  @media (max-width: 480px) {
+    /* line 834, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_head {
+      padding-bottom: 12px;
+    }
+  }
+  /* line 841, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_head h2 {
+    font-size: 20px;
+    color: #ff5312;
+    font-weight: 600;
+    margin-bottom: 0px;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 841, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_head h2 {
+      font-size: 18px;
+    }
+  }
+  /* line 850, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_head label {
+    font-size: 14px;
+    color: #484848;
+  }
+  /* line 855, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body {
+    padding: 23px 22px 14px 22px;
+    background: #f2f2f2;
+    border-bottom: 1px solid #d9dadb;
+    float: left;
+    width: 100%;
+    position: relative;
+  }
+  /* line 862, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 868, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list.half li {
+    width: 50% !important;
+    /* 480 px*/
+  }
+  @media (max-width: 575px) {
+    /* line 868, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_body ul.complete_list.half li {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+  }
+  /* line 876, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list li {
+    float: left;
+    width: 33.333%;
+    list-style: none;
+    /* 1110 px*/
+    /* 767 px*/
+    /* 480 px*/
+  }
+  @media (max-width: 1110px) {
+    /* line 876, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_body ul.complete_list li {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 767px) {
+    /* line 876, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_body ul.complete_list li {
+      width: 33.333% !important;
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 575px) {
+    /* line 876, ../scss/pages/_payment.scss */
+    .main_boxes .main_box .main_box_body ul.complete_list li {
+      width: 100% !important;
+      margin-bottom: 10px;
+    }
+  }
+  /* line 892, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list li p {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin-bottom: 0;
+    line-height: 16px;
+  }
+  /* line 898, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list li .span_text {
+    font-size: 14px;
+    color: #484848;
+    line-height: 16px;
+  }
+  /* line 902, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list li .span_text.mt_5 {
+    margin-top: 5px;
+    display: block;
+  }
+  /* line 907, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list li a {
+    font-size: 14px;
+    color: #30ad23;
+    line-height: 16px;
+  }
+  /* line 911, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body ul.complete_list li a.ruby {
+    color: #ed0000;
+  }
+  /* line 917, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action {
+    position: absolute;
+    right: 25px;
+    top: -20px;
+    width: 300px;
+    height: 40px;
+  }
+  /* line 923, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action.action_withP {
+    right: 76px !important;
+  }
+  /* line 926, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action .slide_icon {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    border-radius: 30px;
+    background: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+  }
+  /* line 935, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action .slide_icon:after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 17px;
+    left: 50%;
+    top: 11px;
+    transform: translate(-50%);
+    background: url(../../../../../assets/images/dots_after.png);
+    background-size: 100%;
+  }
+  /* line 947, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action .slide_list {
+    background: #ff5312;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: auto;
+    z-index: 4;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    padding: 12px 40px 0 0;
+    margin-right: 0;
+  }
+  /* line 958, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action .slide_list a {
+    position: relative;
+    width: 18px;
+    display: inline-block;
+    height: 20px;
+    margin-left: 16px;
+  }
+  /* line 964, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action .slide_list a:before {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    content: "";
+    width: 17px;
+    height: 10px;
+    background: url(../../../../../assets/images/preview_icon_w.png) no-repeat;
+    background-size: 100%;
+  }
+  /* line 975, ../scss/pages/_payment.scss */
+  .main_boxes .main_box .main_box_body .action .slide_list a:hover:before {
+    background-position: bottom left;
+  }
+  /* line 984, ../scss/pages/_payment.scss */
+  .main_boxes .btn_bottom {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 30px;
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 984, ../scss/pages/_payment.scss */
+    .main_boxes .btn_bottom {
+      margin-top: 0 !important;
+    }
+  }
+  /* line 993, ../scss/pages/_payment.scss */
+  .main_boxes .btn_bottom a {
+    background: #ff5312;
+    margin-top: 30px;
+    display: inline;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: 0px;
+    padding: 9px 22px 10px 22px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    border-radius: 24px;
+    -webkit-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    -moz-box-shadow: 1px 2px 20px 0 rgba(1, 1, 1, 0.15);
+    /* 767 px*/
+  }
+  @media (max-width: 767px) {
+    /* line 993, ../scss/pages/_payment.scss */
+    .main_boxes .btn_bottom a {
+      margin-top: 0 !important;
+    }
+  }
+  

@@ -1,0 +1,95 @@
+<div class="container-fluid term_top_sec">
+  <div class="container term_box">
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar_bottom">
+      <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+        data-target="#collapsingNavbar_1">
+        <span> </span>
+        <span> </span>
+        <span> </span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsingNavbar_1">
+        <ul class="navbar-nav mr-auto" *ngIf='post'>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/post']" [routerLinkActive]="['active-link']" class="nav-link">My Posts</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/managebids']" [routerLinkActive]="['active-link']" class="nav-link">Manage
+              Bids</a>
+            <!-- <a href="#">Manage Bids</a> -->
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/manageposts']">Manage Posts</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/activeprojects']">Active Projects</a>
+          </li>
+          
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/completedprojects']">Completed Projects</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav mr-auto" *ngIf='account'>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/manageaccount']" [routerLinkActive]="['active-link']" class="nav-link">Personal</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/managepassword']" [routerLinkActive]="['active-link']" class="nav-link">Password</a>
+          </li>
+        </ul>
+         <ul class="navbar-nav mr-auto" *ngIf='payment'>
+          <!-- <li class="nav-item">
+            <a [routerLink]="['/consumer/payment']" [routerLinkActive]="['active-link']" class="nav-link">Payments Method</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/managepassword']" [routerLinkActive]="['active-link']" class="nav-link">Refunded Amounts</a>
+          </li> -->
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/e_sig']" [routerLinkActive]="['active-link']" class="nav-link">E-Signature</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/consumer/resolutioncenter']" [routerLinkActive]="['active-link']" class="nav-link">Resolution Center</a>
+          </li>
+        </ul>
+      </div>
+          <div class="serach_post">
+        <!-- <form class="form_top">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+        </form> -->
+      </div> 
+      <div class="btn-group grid_btns" role="group" aria-label="Basic example">
+        <a [routerLink]="isPost ? ['/consumer/cardposts'] : []" (click)="isGridView = false" id="list" class="btn btn-default btn-sm grid"
+          [class.active]="!isGridView"></a>
+        <a [routerLink]="isPost ? ['/consumer/manageposts']: []" (click)="isGridView = true" id="grid" class="btn btn-default btn-sm"
+          [class.active]="isGridView"></a>
+      </div>
+    </nav>
+  </div>
+</div>
+<div>
+  <div class="container create_new_box">
+    <div class="row">
+      <div class="col-6">
+        <div class="create_new_post">
+          <a>Create New Post</a>
+        </div>
+      </div>
+      <div class="col-6 text-right">
+        <span class="financing_available_from">
+          Need Financing? Compare Personal Loans For Home Improvement: 
+          <a href="lendingtree.com" class="logo_f" target="_blank">
+              <img src="../assets/images/lendingtree/LT_logo_2018_Gradient_White.png" width="99" height="30" alt="logo" />
+            </a> 
+            <!-- <a href="upstart.com" class="logo_f" target="_blank">
+              <img src="../assets/images/upstartlogo.png" width="156" height="30" alt="logo" />
+            </a>
+            <a href="sofi.com" class="logo_f" target="_blank">
+              <img src="../assets/images/SoFi_logo_white.png" width="80" height="30" alt="logo" />
+            </a> -->
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

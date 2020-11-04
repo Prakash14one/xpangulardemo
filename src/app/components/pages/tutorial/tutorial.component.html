@@ -1,0 +1,250 @@
+<header>
+  <div class="container-fluid header_top">
+    <div class="container">
+      <ul class="text-right m-0">
+        <li>
+          <a routerLink="/faq" (click)="toggle('help')">Help</a>
+        </li>
+        <li>
+          <a routerLink='/tutorial'>View Tutorials </a>
+        </li>
+        <li class="pr-0">
+          <a href="../index.html" class="logout"> Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid header_main">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="../index.html"><img src="../../../assets/images/logo.png" width="123" height="50"
+            class="logo_for_desk" alt="logo">
+          <img src="../../../assets/images/logo_small.png" width="45" height="34" class="logo_for_mobile"
+            alt="logo"></a>
+        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+          data-target="#collapsingNavbar">
+          <span> </span>
+          <span> </span>
+          <span> </span>
+        </button>
+        <div class="container-fluid term_top_sec" *ngIf='help'>
+          <div class="container term_box">
+            <ul>
+              <li><a routerLink="/faq">FAQ</a></li>
+              <li><a routerLink="/howto" class="active">How To</a></li>
+              <li><a routerLink="/useragreement">User Agreement &amp; Policy </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+              <a class="nav-link" [ngClass]="{'active' : post == true}" [routerLink]="['/consumer/post']"
+                (click)="toggle('post')">My Posts </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Messages </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active' : calendar == true}" [routerLink]="['/consumer/calendar']"
+                (click)="toggle('calendar')">Calendar </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active' : account == true}" [routerLink]="['/consumer/manageaccount']"
+                (click)="toggle('account')">
+                Manage Account </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active' : payment == true}" [routerLink]="['/consumer/e_sig']"
+                (click)="toggle('payment')"> Payment
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [ngClass]="{'active' : payment == true}" [routerLink]="['/consumer/e_sig']"
+                (click)="toggle('payment')"> Payment
+              </a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a class="nav-link" href="help_faq.html">Help</a>q
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a class="nav-link" href="tutorial.html">View Tutorials</a>
+            </li>
+            <li class="nav-item for_mobile_m">
+              <a class="nav-link" href="../index.html" class="logout"> Logout </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="rightMenu">
+        <li class="dropdown anim-drop Profile_sec dropdown-profile">
+          <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle msg_icon"
+            href="javascript:void(0)"><span></span></a>
+          <ul class="dropdown-menu ">
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <p>
+                <a href="messages.html">View All Messages</a>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown anim-drop Profile_sec dropdown-profile">
+          <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle notifi"
+            href="javascript:void(0)"><span></span><span class="badge"><b>2</b></span> </a>
+          <ul class="dropdown-menu dropdown-profile">
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <div class="notification-img">
+                <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+              </div>
+              <div class="notification-msg">
+                <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+              </div>
+            </li>
+            <li>
+              <p>
+                <a href="#">View All Notifications</a>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown anim-drop Profile_sec">
+          <a aria-expanded="false" class="Profile_icon" href="javascript:void(0)">J</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="container-fluid tatorial_sec">
+  <div class="container ">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="image_main">
+          <div class="top_sec">
+            <a href="#" class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0"
+              data-target="#myModal"><img src="../../../../assets/images/tatorial_1.jpg" alt="img">
+              <span class="overlay"></span></a>
+          </div>
+          <div class="img_content">
+            <p>Introduction to Xpertsbid </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="image_main">
+          <div class="top_sec">
+            <a href="#" class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0"
+              data-target="#myModal"><img src="../../../../assets/images/tatorial_2.jpg" alt="img">
+              <span class="overlay"></span></a>
+          </div>
+          <div class="img_content">
+            <p>How to post a gadget ?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="image_main">
+          <div class="top_sec">
+            <a href="#" class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0"
+              data-target="#myModal"><img src="../../../../assets/images/tatorial_3.jpg" alt="img">
+              <span class="overlay"></span></a>
+          </div>
+          <div class="img_content">
+            <p>How to communicate with your Service Provider?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="image_main">
+          <div class="top_sec">
+            <a href="#" class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0"
+              data-target="#myModal"> <img src="../../../../assets/images/tatorial_4.jpg" alt="img">
+              <span class="overlay"></span></a>
+          </div>
+          <div class="img_content">
+            <p>How a consumer can Pay for your Repair/Service and Installation? </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="image_main">
+          <div class="top_sec">
+            <a href="#" class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0"
+              data-target="#myModal"><img src="../../../../assets/images/tatorial_5.jpg" alt="img">
+              <span class="overlay"></span></a>
+          </div>
+          <div class="img_content">
+            <p>How a consumer can Post an item for Installation?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+        <div class="image_main">
+          <div class="top_sec">
+            <a href="#" class="video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/58385453?badge=0"
+              data-target="#myModal"><img src="../../../../assets/images/tatorial_6.jpg" alt="img">
+              <span class="overlay"></span></a>
+          </div>
+          <div class="img_content">
+            <p>How a consumer can Post an item for Repair/Service?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

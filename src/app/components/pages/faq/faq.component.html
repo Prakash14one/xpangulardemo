@@ -1,0 +1,495 @@
+<header>
+  <div class="container-fluid header_top">
+      <div class="container">
+         <ul class="text-right m-0">
+            <li>
+               <a routerLink="/faq" (click)="toggle('help')">Help</a>
+            </li>
+            <li>
+               <a routerLink='/tutorial'>View Tutorials </a>
+            </li>
+            <li class="pr-0">
+               <a href="../index.html" class="logout"> Logout</a>
+            </li>
+         </ul>
+      </div>
+   </div>
+  <div class="container-fluid header_main">
+      <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand" href="../index.html"><img src="../../../assets/images/logo.png" width="123"
+                      height="50" class="logo_for_desk" alt="logo">
+                  <img src="../../../assets/images/logo_small.png" width="45" height="34" class="logo_for_mobile"
+                      alt="logo"></a>
+              <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse"
+                  data-target="#collapsingNavbar">
+                  <span> </span>
+                  <span> </span>
+                  <span> </span>
+              </button>
+              <div class="container-fluid term_top_sec" *ngIf='help'>
+                  <div class="container term_box">
+                    <ul>
+                      <li><a routerLink="/faq" >FAQ</a></li>
+                      <li><a routerLink="/howto" class="active">How To</a></li>
+                      <li><a routerLink="/useragreement">User Agreement &amp; Policy </a></li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="collapse navbar-collapse" id="collapsingNavbar">
+                  <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+                          <a class="nav-link" [ngClass]="{'active' : post == true}" [routerLink]="['/consumer/post']" (click)="toggle('post')">My Posts </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link">Messages </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [ngClass]="{'active' : calendar == true}" [routerLink]="['/consumer/calendar']" (click)="toggle('calendar')">Calendar </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [ngClass]="{'active' : account == true}" [routerLink]="['/consumer/manageaccount']" (click)="toggle('account')">
+                              Manage Account </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" [ngClass]="{'active' : payment == true}" [routerLink]="['/consumer/e_sig']" (click)="toggle('payment')"> Payment
+                          </a>
+                      </li>
+                      <li class="nav-item for_mobile_m">
+                          <a class="nav-link" href="help_faq.html">Help</a>q
+                      </li>
+                      <li class="nav-item for_mobile_m">
+                          <a class="nav-link" href="tutorial.html">View Tutorials</a>
+                      </li>
+                      <li class="nav-item for_mobile_m">
+                          <a class="nav-link" href="../index.html" class="logout"> Logout </a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+          <ul class="rightMenu">
+              <li class="dropdown anim-drop Profile_sec dropdown-profile">
+                  <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle msg_icon"
+                      href="javascript:void(0)"><span></span></a>
+                  <ul class="dropdown-menu ">
+                      <li>
+                          <div class="notification-img">
+                              <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                          </div>
+                          <div class="notification-msg">
+                              <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="notification-img">
+                              <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+                          </div>
+                          <div class="notification-msg">
+                              <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="notification-img">
+                              <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                          </div>
+                          <div class="notification-msg">
+                              <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                          </div>
+                      </li>
+                      <li>
+                          <p>
+                              <a href="messages.html">View All Messages</a>
+                          </p>
+                      </li>
+                  </ul>
+              </li>
+              <li class="dropdown anim-drop Profile_sec dropdown-profile">
+                  <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle notifi"
+                      href="javascript:void(0)"><span></span><span class="badge"><b>2</b></span> </a>
+                  <ul class="dropdown-menu dropdown-profile">
+                      <li>
+                          <div class="notification-img">
+                              <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                          </div>
+                          <div class="notification-msg">
+                              <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="notification-img">
+                              <img src="../../../assets/images/n2.jpg" width="50" height="50" alt="n1">
+                          </div>
+                          <div class="notification-msg">
+                              <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="notification-img">
+                              <img src="../../../assets/images/n1.jpg" width="50" height="50" alt="n1">
+                          </div>
+                          <div class="notification-msg">
+                              <strong>Patric Nurela</strong> Sent you a new message<span class="timer">14:15:56</span>
+                          </div>
+                      </li>
+                      <li>
+                          <p>
+                              <a href="#">View All Notifications</a>
+                          </p>
+                      </li>
+                  </ul>
+              </li>
+              <li class="dropdown anim-drop Profile_sec">
+                  <a aria-expanded="false" class="Profile_icon" href="javascript:void(0)">J</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</header>
+<div class="container-fluid term_top_sec">
+  <div class="container term_box">
+    <ul>
+      <li><a routerLink="/faq" class="active">FAQ</a></li>
+      <li><a routerLink="/howto">How To</a></li>
+      <li><a routerLink="/useragreement">User Agreement &amp; Policy </a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid forum_list">
+    <div class="container ">
+      <div class="faq_list">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne" (click)="toggle('headingOne','collapseOne','headerOne')">
+              <h5 id="headerOne" class="mb-0 d-inline" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                What is XpBids?
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style="">
+              <div class="card-body">
+                <p>
+                  XpBids is a web and mobile application that allows consumers
+                  to find Service professionals to bid and complete their
+                  projects
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo" (click)="toggle('headingTwo','collapseTwo','headerTwo')">
+              <h5 id="headerTwo" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Is XpBids liable for incomplete projects?
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  No, XpBids is merely a platform that provides the tools
+                  necessary for both the consumer and service professionals to
+                  agree on a projects , escrow payment and track work progress
+                  until completion
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree" (click)="toggle('headingThree','collapseThree','headerThree')">
+              <h5 id="headerThree" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Can I post multiple Projects?
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Yes, a consumer can post multiple projects and manage
+                  multiple projects simultaneously through the Consumer
+                  dashboard
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour" (click)="toggle('headingFour','collapseFour','headerFour')">
+              <h5 id="headerFour" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                How does XpBids protect payment?
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Payment are kept in an escrow and would only be released to
+                  Service Professional with consumer consent or at the
+                  completion of the project
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive" (click)="toggle('headingFive','collapseFive','headerFive')">
+              <h5 id="headerFive" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                What if a Service Professional does not complete the project?
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  If a service professional does not complete a project and
+                  cancels the project, XpBids will refund payment in escrow
+                  back to the consumer
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSix" (click)="toggle('headingSix','collapseSix','headerSix')">
+              <h5 id="headerSix" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Does the Service Professional work for XpBids?
+              </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  No, XpBids is a tool used by independent Service
+                  Professionals to bid on project
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSeven" (click)="toggle('headingSeven','collapseSeven','headerSeven')">
+              <h5 id="headerSeven" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Where does the Service Professional Reviews come from?
+              </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+              <div class="card-body">
+                <p>Individual reviews come from former consumers</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingEight" (click)="toggle('headingEight','collapseEight','headerEight')">
+              <h5 id="headerEight" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Can I leave a review regarding my experience with a service
+                professional?
+              </h5>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+              <div class="card-body">
+                <p>Yes, at the conclusion of the project</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingNine" (click)="toggle('headingNine','collapseNine','headerNine')">
+              <h5 id="headerNine" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                Can I cancel a project?
+              </h5>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Yes, a consumer can cancel a project, however the Percentage
+                  of work completed will be credited to the Service
+                  Professional and the remaining balance will be refunded to
+                  the consumer
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingten" (click)="toggle('headingten','collapseTen','headerten')">
+              <h5 id="headerten" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                How do I contact XpBids?
+              </h5>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  You can send us an email, we will respond to emails
+                  generally within 24hrs or you can call XpBids at
+                  855-423-4545
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading11" (click)="toggle('heading11','collapse11','header11')">
+              <h5 id="header11" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                Can I dispute a transaction?
+              </h5>
+            </div>
+            <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Yes, a consumer will be able to dispute completed projects
+                  as defined by the statement of work through the resolution
+                  center found on your dashboard
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading12" (click)="toggle('heading12','collapse12','header12')">
+              <h5 id="header12" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                Can I change my Bid?
+              </h5>
+            </div>
+            <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Yes, service Professional will be able to change their bid
+                  prior to an accepted bid by the consumer
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading13" (click)="toggle('heading13','collapse13','header13')">
+              <h5 id="header13" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                Will I be able to speak with the Service Professional?
+              </h5>
+            </div>
+            <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Yes, a consumer will be able to communicate with the Service
+                  Professional through XpBids messaging center
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading14" (click)="toggle('heading14','collapse14','header14')">
+              <h5 id="header14" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                Could the bid price change?
+              </h5>
+            </div>
+            <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Yes, a service professional might begin work and discover
+                  that the scope of the project is significantly more than the
+                  initial estimation and the bid agreement. In such situations
+                  service professionals will indicate changes to consumers and
+                  submit an addendum to the project, which the consumer may
+                  accept or decline.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading15" (click)="toggle('heading15','collapse15','header15')">
+              <h5 id="header15" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                What is an Escrow?
+              </h5>
+            </div>
+            <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  An escrow protects the fee associated with the service
+                  rendered by the service professional. Xpbids escrow is
+                  provided to you through escrow.com where your funds are held
+                  in secured, non interest bearing trust Escrow Accounts until
+                  the transaction is completed. This ensures that your
+                  transaction is protected against chargebacks, fraud or
+                  wrongly described services.
+                </p>
+                <p>
+                  Xpbids is founded on the principles of protecting the
+                  consumer and Service professional to ensure a safe and
+                  secure transaction of services and payment.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading16" (click)="toggle('heading16','collapse16','header16')">
+              <h5 id="header16" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                Are my messages secure?
+              </h5>
+            </div>
+            <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Our in App messaging interface allows you a level of
+                  security that protects the integrity of the bilateral
+                  exchange that you will have between consumer and service
+                  professional
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading17" (click)="toggle('heading17','collapse17','header17')">
+              <h5 id="header17" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                Should I make payment outside of Xpbids?
+              </h5>
+            </div>
+            <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Our core differentiator from other websites is payment
+                  security. Protecting your payments against risk is one of
+                  the foundational focus of our platform. We strongly
+                  discourage you from making payment arrangements outside of
+                  the secure payment arrangement of xpbids. If you do we
+                  cannot ensure the quality nor the security of payments
+                  outside of the platform
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading18" (click)="toggle('heading18','collapse18','header18')">
+              <h5 id="header18" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                What forms of payments are acceptable?
+              </h5>
+            </div>
+            <div id="collapse18" class="collapse" aria-labelledby="heading18" data-parent="#accordion">
+              <div class="card-body">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading19" (click)="toggle('heading19','collapse19','header19')">
+              <h5 id="header19" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                Who purchases material?
+              </h5>
+            </div>
+            <div id="collapse19" class="collapse" aria-labelledby="heading19" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  As a consumer you can opt to purchase your own material or
+                  elect for the service professional to acquire the needed
+                  material. A consumer will be able to elect during posting of
+                  their project to indicate their preference. Service
+                  professionals will also be able to make certain that their
+                  bids are labor only or includes material
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading20" (click)="toggle('heading20','collapse20','header20')">
+              <h5 id="header20" class="mb-0 collapsed" data-toggle="collapse" data-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                What is Statement of work or SOW?
+              </h5>
+            </div>
+            <div id="collapse20" class="collapse" aria-labelledby="heading20" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  Statement of work is a signature feature that is unique to
+                  Xpbids. SOW allows Service Professionals to clearly outline
+                  phases and tasks associated with the project. Service
+                  Professionals will complete an SOW and submit their bids to
+                  the consumers in that format.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

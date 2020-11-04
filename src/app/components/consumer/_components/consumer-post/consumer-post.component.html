@@ -1,0 +1,38 @@
+<div class="container-fluid payment_Sec">
+  <div class="container ">
+    <div class="table_list">
+      <div class="table_sec table_sec_smp">
+        <table style="width:100%;">
+          <tr>
+            <th>Project Title</th>
+            <th>Category Name </th>
+            <th>Posted Date</th>
+            <th>Desired Time of Work</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor='let post of mypost'>
+            <td>{{ post.title }}</td>
+            <td>{{post.category}}</td>
+            <td>{{post.postDate | date: 'yyyy-dd-MM'}}</td>
+            <td>{{post.desiredTimeOfDay}}</td>
+            <td>
+              <span class="table_actions">
+                <a href="#" data-toggle="modal" data-target="#myModal" (click)="onListPopUp(post)"></a>
+                <a href="#" data-toggle="modal" data-target="#myModal" class='edit' (click)='editPopup(post)'></a>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <!-- <li class="page-item"><a class="page-link pre" href="#"></a></li> -->
+          <li class="page-item"><a class="page-link " href="javascript:void(0)">1</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+          <li class="page-item"><a class="page-link next" href="javascript:void(0)"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

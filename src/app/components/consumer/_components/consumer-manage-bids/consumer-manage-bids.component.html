@@ -1,0 +1,53 @@
+<div class="container-fluid payment_Sec">
+  <div class="container">
+    <div *ngIf="!isGridView" class="grid_view">
+      <div class="payment_Sec pt-0">
+        <mat-accordion class="example-headers-align" multi>
+          <mat-expansion-panel hideToggle="show" *ngFor="let element of elements; let i = index" (afterExpand)="afterPanelOpened($event)">
+            <mat-expansion-panel-header (click)="loadProjectBid(element.id,i)" id='accordion-header' style='background-color: #eee;'>
+              <mat-panel-title>
+                {{element.title}}
+              </mat-panel-title>
+              <mat-panel-description>
+                <mat-label style='right: 45px;position: absolute;' *ngIf='show && i===val'>
+                  {{ (totalcount === null || totalcount === 0) ? '0' : totalcount }}</mat-label>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div *ngIf="i===val && show ===true" class="table_sec">
+              <table style="width:100%;">
+                <tr>
+                  <th style="cursor:pointer;" (click)="sort('providerFirstName,providerLastName')">Service Professional
+                  </th>
+                  <th>SP Rating</th>
+                  <th>Bid Amount</th>
+                  <th style="cursor:pointer;" (click)="sort('dayEstimate')">Estimated Time</th>
+                  <th>Accept</th>
+                  <th>Actions</th>
+                  <th style="cursor:pointer;" (click)="sort('providerBusinessRegistration')">Credential
+                  </th>
+                  <th>Bid expiration</th>
+                </tr>
+                <tr *ngFor="let bidelement of bidelements | sorting: {property: column, direction: direction} ;">
+                  <td style="cursor: pointer;" (click)='openDetailDialogBox(bidelement)'><img class="rounded-circle"
+                      alt="img" src="assets/images/bid_img1.jpg"> {{bidelement.providerFirstName}}
+                    {{bidelement.providerLastName}}</td>
+                  <td><input id="input-1" name="input-1" value="4" class="rating-loading" data-size="xs"></td>
+                  <td>{{currencySymbol}} {{bidelement.total}}</td>
+                  <td>{{bidelement.dayEstimate === null ?0 :bidelement.dayEstimate}} days</td>
+                  <td><a class="btn" (click)="onListPopUp(bidelement)">Accept</a></td>
+                  <td><span class="table_actions"><a class="msg1"
+                        (click)="onmszPopUp(bidelement.id,bidelement.providerId)"></a>
+                      <a (click)="onprofessionalPopUp()" class="star"></a>
+                      <a class="star_1" (click)='viewbid(bidelement)'></a>
+                    </span></td>
+                  <td><a class="black">{{bidelement.providerBusinessRegistration}}</a> </td>
+                  <td>{{ bidelement.expiration === null ? '' : (bidelement.expiration |  date: 'MM-dd-yyyy') }}</td>
+                </tr>
+              </table>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</div>

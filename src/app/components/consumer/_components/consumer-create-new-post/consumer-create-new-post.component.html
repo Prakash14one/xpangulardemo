@@ -1,0 +1,179 @@
+<div class="container-fluid singup_main_sec" style='width: auto;overflow: auto;max-height:800px'>
+  <div class="container setting_top ">
+    <h3>Create New Post</h3>
+    <div class="singup_box">
+      <form [formGroup]='CreateForm'>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <mat-select class="selectpicker" placeholder="Select Service Category" [(ngModel)]="category" formControlName='category' (ngModelChange)="filterSubById($event)">
+              <mat-option  value="Home Service">Home Service</mat-option>
+            </mat-select>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <mat-select class="selectpicker" placeholder="Select Service SubCategory*" formControlName='subcategory' [(ngModel)]="subcategory" >
+              
+              <mat-option  value="Kitchen/Bath">Kitchen/Bath</mat-option>
+              <mat-option  value="Home Renovation">Home Renovation</mat-option>
+              <mat-option  value="Home Renovation">Lawn/ Garden </mat-option>
+              <mat-option  value="Home Renovation">Home Electronic Installation </mat-option>
+              <mat-option  value="Home Renovation">Roofing/Gutters </mat-option>
+              <mat-option  value="Home Renovation">Appliance Installation </mat-option>
+              <mat-option  value="Home Renovation">Concrete Work </mat-option>
+              <mat-option  value="Home Renovation">Siding </mat-option>
+              <mat-option  value="Home Renovation">Snow Removal </mat-option>
+              <mat-option  value="Home Renovation">Moving Services </mat-option>
+              <mat-option  value="Home Renovation">Home Product Assembly </mat-option>
+              <mat-option  value="Home Renovation">Garage Door </mat-option>
+              <mat-option  value="Home Renovation">General Contractor </mat-option>
+              <mat-option  value="Home Renovation">Wood Working</mat-option>
+              <mat-option  value="Home Renovation">Carpet Cleaning </mat-option>
+              <mat-option  value="Home Renovation">HAVC Installation</mat-option>
+              <mat-option  value="Home Renovation">Farm Work </mat-option>
+              <mat-option  value="Home Renovation">Swimming Pool</mat-option>
+              <mat-option  value="Home Renovation">General Laborer</mat-option>
+              <mat-option  value="Home Renovation">Handyman</mat-option>
+              <mat-option  value="Home Renovation">Tree Services</mat-option>
+              <mat-option  value="Home Renovation">Flooring</mat-option>
+              <mat-option  value="Home Renovation">Masonary</mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <input type="text" class="form-control" id="text3" formControlName='title' placeholder="New Post Title" required/>
+            <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
+              <div *ngIf="title.errors.required">
+                Title is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-0">
+            <textarea class="form-control" id="comment" placeholder="Detail Description*" formControlName='description' required></textarea>
+            <p class="note textfade">( Maximum 5000 characters allowed )</p>
+            <div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+              <div *ngIf="description.errors.required">
+                Description is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="upload">
+              <input type="file" multiple class="form-control" id="text5" formControlName='file' (change)='selectFile($event)'/>
+            </div>
+            <div id="file-upload-filename"></div>
+            <p class="note textfade">
+              ( Consumer can upload up to 10 images only )
+            </p>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pictures">
+            <ul>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic1.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic2.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic3.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic4.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic5.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic6.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic7.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic8.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic9.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic10.jpg" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">         
+            <mat-label class="row col-12">Preferred Service date</mat-label>
+            <input readonly class="col-12 col-sm-9 " matInput [matDatepicker]="desired_date" formControlName='dtdesireddate' [(ngModel)]="ddtdesireddate" placeholder="Desired Date of Repair*" >
+            <mat-datepicker-toggle class="col-lg-3" matSuffix [for]="desired_date"></mat-datepicker-toggle>
+            <mat-datepicker [disabled]='false' class="col-lg-3" #desired_date></mat-datepicker>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h4>Location of Repair</h4>
+            <mat-radio-group class="row" formControlName='location'>
+              <mat-radio-button class="col-12" value="Store Location">Store Location</mat-radio-button>
+              <mat-radio-button class="col-12" value="Mobile Services">Mobile Services</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h4>Service Professional Type</h4>
+            <mat-radio-group class="row" formControlName='service_type' required>
+              <mat-radio-button class="col-12" value="Licensed/Verified">Licensed/ Verified</mat-radio-button>
+              <mat-radio-button class="col-12" value="Unlicensed/Verified">Unlicensed/ Verified</mat-radio-button>
+              <mat-radio-button class="col-12" value="Both">Both</mat-radio-button>
+            </mat-radio-group>
+            <div *ngIf="service_type.invalid && (service_type.dirty || service_type.touched)" class="alert alert-danger">
+              <div *ngIf="service_type.errors.required">
+                Service Professional Type is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h4>Location of Service</h4>
+
+            <mat-select class="selectpicker" placeholder="Select Address" formControlName='address' required>
+              <mat-option value='Home'>Home</mat-option>
+              <mat-option value='Mom & Dad'>Mom & Dad</mat-option>
+              <mat-option value='Add New' (click)="onsignaturePopup()">Add New</mat-option>
+            </mat-select>
+            <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+              <div *ngIf="address.errors.required">
+                Location of Service is required.
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">4444
+                Address 1: 15 Main Street<br />
+                Address 2: appartment 306<br />
+                City: Columbus<br />
+                State/Zip: Oh, 44444<br />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="checkbox_re">
+              <mat-checkbox value="false" formControlName='chkTermCondi'  [(ngModel)]='chkTerm' required>I agree to the XpBids <a href="#">Terms and Conditions.</a></mat-checkbox>
+              <span class="control_indicator_tm"></span>
+              <div *ngIf="chkTermCondi.invalid && (chkTermCondi.dirty || chkTermCondi.touched)" class="alert alert-danger">
+                <div *ngIf="chkTermCondi.errors.required">
+                  Terms&condition is checked required .
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary blank mr-3">
+              Back
+            </button>
+            <button type="submit" class="btn btn-primary" (click)="SubmitNewProject()">Submit Post</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

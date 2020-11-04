@@ -1,0 +1,85 @@
+.bottom-section {
+    padding: 15px;
+  }
+.esig{
+  width: 600px;
+  height: auto;
+}
+
+  .left-section label {
+    width: 100%;
+  }
+
+  .left-section textarea {
+    overflow: auto;
+    resize: vertical;
+    width: 100%;
+    border: #eee 1px solid;
+    padding-left: 15px;
+  }
+
+  .signature p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .signature img {
+    max-width: 100%;
+  }
+
+  .left-section {
+    border: #eee 1px solid;
+    padding: 0px;
+    overflow: auto;
+  }
+
+  .left-section .modal-header {
+    background-color: #eee;
+  }
+
+  .form-sec {
+    padding: 15px;
+  }
+
+  .form-sec .form-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px !important;
+  }
+
+  .date-of-birth {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px !important;
+  }
+
+  button.btn.btn-danger {
+    background-color: #f45116;
+  }
+
+  button.btn.btn-success {
+    background-color: #e5e5e5;
+    border: none;
+    color: #333;
+  }
+
+  .left-section .form-group p {
+    font-size: 16px;
+  }
+
+  .left-section form p {
+    font-size: 16px;
+  }
+  @media (min-width: 768px){
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 100%;
+    }
+  }
+.btn.btn-danger{
+  border-radius: 20px;
+}
+.btn.btn-success{
+  border-radius: 20px;
+}

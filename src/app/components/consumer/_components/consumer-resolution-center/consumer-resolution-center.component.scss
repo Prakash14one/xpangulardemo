@@ -1,0 +1,175 @@
+.singup_main_sec {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.singup_main_sec .setting_top h3 {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: -45px;
+    margin-bottom: 37px;
+}
+.container {
+    max-width: 1200px;
+}
+.singup_main_sec .singup_box {
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.15);
+    padding: 30px 30px 25px 30px;
+    min-height: 380px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.singup_main_sec .singup_box form .form-group {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-group .bootstrap-select.btn-group, .form-horizontal .bootstrap-select.btn-group, .form-inline .bootstrap-select.btn-group {
+    margin-bottom: 0;
+}
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*="col-"] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+}
+.bootstrap-select {
+    width: 100% !important;
+    border-bottom: 1px solid #d9d9d9;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+.bootstrap-select .dropdown-toggle::before {
+    position: absolute;
+    background: url(/assets/images/select_bg.png) no-repeat;
+        background-size: auto;
+    width: 11px;
+    height: 12px;
+    bottom: -1px;
+    right: 0;
+    background-size: 100%;
+    content: "";
+}
+.bootstrap-select.btn-group:not(.input-group-btn), .bootstrap-select.btn-group[class*="col-"] {
+    float: none;
+    display: inline-block;
+    margin-left: 0;
+}
+.bootstrap-select {
+    width: 100% !important;
+    border-bottom: 1px solid #d9d9d9;
+}
+.bootstrap-select > select {
+    position: absolute !important;
+    bottom: 0;
+    left: 50%;
+    display: block !important;
+    width: .5px !important;
+    height: 100% !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    border: none;
+}
+.singup_main_sec .singup_box form .btn {
+    border: 0px solid #fff;
+    margin-top: 10px;
+    background: #f45117;
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 11px 31px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 800ms ease-out;
+    position: relative;
+    margin-right: 20px;
+}
+select {
+     background-color: transparent;
+    border: 0;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #7a7a7a;
+    font-size: 14px;
+    outline: 0;
+    line-height: 40px;
+    padding: 5px 20px 0px 0px;
+    text-align: left;
+    transition: all 0.3s;
+    width: 100%;
+    border-radius: 0;
+}
+textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #7a7a7a;
+    font-size: 14px;
+    outline: 0;
+    resize: none;
+    line-height: 40px;
+    padding: 5px 20px 0px 0px;
+    text-align: left;
+    transition: all 0.3s;
+    width: 100%;
+    border-radius: 0;
+}
+.btn {
+    border: 0px solid #fff;
+    margin-top: 10px;
+    background: #f45117;
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 11px 31px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 800ms ease-out;
+    position: relative;
+    margin-right: 20px;
+    margin-top: -3px;
+}
+.btn.blank {
+    background: #e5e5e5 !important;
+    color: #7a7a7a !important;
+    margin-right: 0 !important;
+}

@@ -1,0 +1,64 @@
+<div class="container-fluid payment_Sec">
+  <div class="container">
+    <div *ngIf="!isGridView" class="table_list">
+      <div class="table_sec table_sec_smp">
+        <table style="width:100%;">
+          <tr>
+            <th>Project Title</th>
+            <th>Posted Date</th>
+            <th>Start Date</th>
+            <th>Project ID</th>
+            <th>Category</th>
+            <th>Sub Category</th>
+            <th class="text-center">Status</th>
+            <th>Bid Price</th>
+            <th>Actions</th>
+          </tr>
+          <tr *ngFor="let element of elements">
+            <td>{{element.title}}</td>
+            <td>{{element.postDate | date: 'yyyy-dd-MM'}}</td>
+            <td>{{element.desiredRangeStart | date: 'yyyy-dd-MM'}}</td>
+            <td>{{element.id}}</td>
+            <td>{{element.category}}</td>
+            <td>{{element.subCategory}}</td>
+            <td>{{element.status}}
+              <!-- <circle-progress [space]="-5" [titleFontSize]="8" [unitsFontSize]="8" [percent]="element.percentageComplete"
+                [radius]="40" [animation]="true" [animationDuration]="300">
+              </circle-progress> -->
+            </td>
+            <td>{{currencySymbol}}{{element.sowAmount}}</td>
+            <td>
+              <span class="table_actions">
+                <a (click)="onListPopUp(element.id)"></a>
+                <a class="msg1" (click)="onmszPopUp(element.id,element.providerId)"></a>
+                <a class="cal" data-toggle="modal" (click)="onappoinmentPopUp()"></a>
+                <a (click)="onSowPopUp(element.id)" data-toggle="modal" class="per"></a>
+                <a (click)="onCancelPopUp(element.percentageComplete,element.sowAmount)" class="dis"></a>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--       <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          
+          <li class="page-item">
+            <a class="page-link " href="javascript:void(0)">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0)">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="javascript:void(0)">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link next" href="javascript:void(0)"></a>
+          </li>
+        </ul>
+      </nav> -->
+    </div>
+
+
+
+  </div>
+</div>

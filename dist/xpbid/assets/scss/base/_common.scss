@@ -1,0 +1,67 @@
+// Common Styles. 
+.noPadd { padding: 0px;}
+.w100{ width: 100%;}
+.white_bg { background: #fff; }
+.relative{ position: relative; }
+
+
+@media screen and (max-width: 767px){
+ .sm_noMargin { margin: 0; }
+}
+
+.sm_spinner{
+ width: 22px !important;
+ height: 22px !important;
+  border-right-color: transparent;
+  color: inherit !important;
+  display: inline-block;
+  .mat-spinner{ 
+   width: 22px !important;
+   height: 22px !important;
+   svg{
+    width: 22px !important;
+    height: 22px !important;
+    circle { stroke: white; }
+   }
+  }
+}
+
+.about-banner {
+  position: relative;
+  img {
+   width: 100%;
+  }
+  h2 {
+   color: #000;
+   float: left;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 32px;
+   font-weight: 300;
+   margin-bottom: 10px;
+   width: auto;
+   position: absolute;
+   @media screen and (max-width: 991px) {
+    font-size: 20px; 
+  }
+  }  
+ }
+
+ @media screen and (max-width: 991px){
+  .container.sm_full_width {
+    width: 100%;
+  }
+ }
+
+ @media screen and (max-width: 767px){
+ .page {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+ }
+}
+
+ .white_bg {
+  background: #fff;
+ }

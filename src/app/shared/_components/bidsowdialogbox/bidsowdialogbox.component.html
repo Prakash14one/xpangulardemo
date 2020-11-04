@@ -1,0 +1,91 @@
+<div class="enter-form-group">
+  <h2 mat-dialog-title>
+    STATEMENT OF WORK
+    <button class="add-phase-btn btn" style="float: right;">Add Phase</button>
+    <button type="button" class="close" data-dismiss="modal"></button>
+  </h2>
+  <mat-dialog-content>
+    <div class="model_main model_main_bid show" id="statement_mod">
+      <!-- Modal body -->
+
+      <div class="modal-body p-0">
+        <div class="payment_Sec_box">
+          <form id="add_bid" class="add_bid">
+            <div class="row">
+              <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4>Bid Amount</h4>
+                <!-- <span class="text-gray"><b>{{ model._total | currency }}</b></span> -->
+              </div>
+            </div>
+
+            <div class="row" *ngIf="model">
+              <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <ng-container *ngFor="let phase of model.sowVersions[0].sowPhases; let i = index">
+                  <div class="row">
+                    <div class="form-group col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                      <input readonly class="form-control text-primary phase" type="text" [placeholder]="'PHASE ' + (i + 1)"
+                        [(ngModel)]="phase.title" [ngModelOptions]="{standalone: true}" />
+                    </div>
+                    <div class="form-group col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      <span class="text-gray">{{
+                        phase._phaseTotal | currency
+                      }}</span>
+                      <span *ngIf="isUpdate">{{ phase._percentage }}</span>
+                    </div>
+                  </div>
+
+                  <!-- tasks -->
+                  <div class="row" *ngFor="let task of phase.sowTasks; let i = index">
+                    <div class="form-group col-12 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                      <input readonly class="form-control" type="text" [placeholder]="'TASK ' + (i + 1)" [(ngModel)]="task.title"
+                        [ngModelOptions]="{standalone: true}" />
+                    </div>
+                    <div class="form-group col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                      <input readonly class="form-control" placeholder="0.00" type="number" [ngModelOptions]="{standalone: true}"
+                        [(ngModel)]="task.estimate" (change)="calculate()" />
+                    </div>
+                    <div *ngIf="model.createdDate" class="form-group col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                      <label class="switch"><input id="togBtn" type="checkbox" />
+                        <div class="slider round"></div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <hr />
+                </ng-container>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h4>Estimated Time of Work (In Days)</h4>
+                <input type="text" class="form-control" [(ngModel)]="model.dayEstimate"
+                  [ngModelOptions]="{standalone: true}" placeholder="12" />
+              </div>
+              <mat-form-field class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <input matInput [matDatepicker]="startDatePicker" placeholder="START DATE" />
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <input matInput [matDatepicker]="expirationDatePicker" [ngModelOptions]="{standalone: true}"
+                  [(ngModel)]="model.expirationDate" placeholder="BID EXPIRATION DATE" />
+                <mat-datepicker-toggle matSuffix [for]="expirationDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #expirationDatePicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="row justify-content-end">
+    <button type="submit" class="btn btn-primary" style="margin-right: 2em;" [disabled]="model.errors" (click)="bid()">
+      {{ isUpdate ? 'Update' : 'Submit' }}
+    </button>
+    <button type="submit" class="btn btn-primary blank add_btn" (click)="dialogRef.close()">
+      Cancel
+    </button>
+  </mat-dialog-actions>
+</div>

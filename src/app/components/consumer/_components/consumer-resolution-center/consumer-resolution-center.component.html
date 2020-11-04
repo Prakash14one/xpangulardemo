@@ -1,0 +1,42 @@
+<div class="container-fluid singup_main_sec">
+   <div class="container setting_top ">
+      <h3>Resolution Center</h3>
+      <div class="singup_box">
+         <form [formGroup]="resolutionForm">
+            <div class="row">
+               <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <select formControlName="project" class="selectpicker" title="SELECT PROJECT TO DISPUTE">
+                     <option [selected]='true' disabled value="-1">SELECT PROJECT TO DISPUTE</option>
+                     <option value="project 1">project 1</option>
+                     <option value="project 2">project 2</option>
+                     <option value="project 3">project 3</option>
+                  </select>
+               </div>
+               <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <select formControlName="reason" class="selectpicker" title="REASON FOR DISPUTE">
+                     <option [selected]='true' disabled value="-1">REASON FOR DISPUTE</option>
+                     <option value="Service did not complete work">Service did not complete work</option>
+                     <option value="Poor quality of work">Poor quality of work</option>
+                     <option value="Payment Dispute">Payment Dispute</option>
+                     <option value="Other">Other</option>
+
+                  </select>
+               </div>
+               <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                  <textarea class="form-control" formControlName="note" placeholder="Note..."></textarea>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+               <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+
+                  <button type="submit" (click)="Add()" class="btn btn-primary  mr-3">Add</button>
+                  <button type="submit" (click)="cancel()" class="btn btn-primary blank">Cancel</button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

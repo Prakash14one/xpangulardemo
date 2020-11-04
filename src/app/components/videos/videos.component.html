@@ -1,0 +1,27 @@
+<div class="container-fluid main_banner">
+  <div class="container">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 banner_text">
+      <h5>Watch Videos</h5>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div id="videos" class="container-fluid videos">
+    <div class="row">
+      <xb-video *ngFor="let video of videos | slice:0:12;" class="col-sm-3" [video]="video" showTitle="true"></xb-video>
+    </div>
+  </div>
+</div>
+<div class="download_app">
+  <div class="container">
+    <div class="text-center download_hd">
+      <h3> Welcome to XpBids</h3>
+      <h2>Download our App it’s FREE</h2>
+      <p class="common_p">Now you can receive live bids</p>
+    </div>
+    <ul>
+      <li> <a> <img alt="pic" src="../assets/images/apple_store.png"></a></li>
+      <li> <a> <img alt="pic" src="../assets/images/google_play.png"></a></li>
+    </ul>
+  </div>
+</div>

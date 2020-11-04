@@ -1,0 +1,116 @@
+// .mat_header {
+//     padding-bottom: 0.6rem;
+//     text-align: right;
+//     cursor: pointer;
+//     border-bottom: 1px solid #e9ecef;
+//     text-shadow: 0 1px 0 #fff;
+//     opacity: .5;
+//     span{font-size: 20px;}
+// }
+// .des{
+//     margin-top: 20px;
+//     max-width: 400px;
+// }
+// .profile_sec .des h3 {
+//     font-size: 18px;
+//     font-weight: 600;
+//     span {
+//         font-size: 15px;
+//         color: #ef3500;
+//         font-style: italic;
+//     }
+// }
+// .mat-dialog-container{padding: 0 !important;}
+
+
+.model_main .modal-dialog .modal-header {
+    background: #ececec;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    padding-top: 12px;
+}
+.model_main .modal-dialog .modal-header h4 {
+    text-align: left;
+    width: 100%;
+    font-size: 19px;
+    color: #333333;
+    padding: 12px;
+    text-transform: uppercase;
+}
+.model_main .modal-dialog .modal-header .close {
+    width: 16px;
+    height: 16px;
+    background: url(/assets/images/close_pop.png) no-repeat;
+    background-size: auto;
+    background-size: 100%;
+    opacity: 1;
+    position: absolute;
+    z-index: 5666;
+    right: 27px;
+    top: 27px;
+    padding: 0;
+    margin: 0;
+}
+.model_main .modal-dialog .modal-body .payment_Sec_box form .form-group {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+.model_main .modal-dialog .modal-body .payment_Sec_box form .form-group input::placeholder {
+    color: #787878 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+}
+.model_main .modal-dialog .modal-body .payment_Sec_box form .btn {
+    border: 0px solid #fff;
+    margin-top: 10px;
+    background: #f45117;
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 11px 31px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 800ms ease-out;
+    position: relative;
+    margin-right: 20px;
+    margin-top: -3px;
+}
+.model_main .modal-dialog .modal-body .payment_Sec_box form .btn.blank {
+    background: #e5e5e5;
+    color: #7a7a7a;
+    margin-right: 0;
+}
+.model_main .modal-dialog .modal-body .payment_Sec_box form .form-group textarea {
+    background-color: transparent;
+    border: 0;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: 0px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #7a7a7a;
+    font-size: 14px;
+    outline: 0;
+    resize: none;
+    line-height: 40px;
+    padding: 5px 20px 0px 0px;
+    text-align: left;
+    transition: all 0.3s;
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+}

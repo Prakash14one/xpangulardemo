@@ -1,0 +1,140 @@
+<div class="container-fluid singup_main_sec" style='width: auto;overflow: auto;max-height:800px'>
+  <button type="button" class="close" mat-button mat-dialog-close (click)='OnNoClick()'>X</button>
+  <div class="container setting_top ">
+    <h3>Edit Post</h3>
+    <div class="singup_box">
+      <form [formGroup]='editForm'>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <mat-select class="selectpicker" placeholder="Select Service Category" formControlName='category' >
+              <mat-option *ngFor="let categories of categoriesList" [value]="categories.id" (click)="filterSubById(categories)">{{categories.name}}</mat-option>
+            </mat-select>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <mat-select class="selectpicker" placeholder="Select Service SubCategory*" formControlName='subcategory' >
+              <mat-option *ngFor="let subcategories of subcategoriesList" [value]="subcategories.id">{{subcategories.name}}</mat-option>
+            </mat-select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <input type="text" class="form-control" id="text3" formControlName='title' placeholder="New Post Title" name="title"/>
+          </div>
+          <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-0">
+            <textarea class="form-control" id="comment" placeholder="Detail Description*" name="description" formControlName='description'></textarea>
+            <p class="note textfade">( Maximum 5000 characters allowed )</p>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="upload">
+              <input type="file" multiple class="form-control" id="text5" formControlName='file' (change)='SelectFile($event)'/>
+            </div>
+            <div id="file-upload"></div>
+            <p class="note textfade">
+              ( Consumer can upload up to 10 images only )
+            </p>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 pictures">
+            <ul>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic1.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic2.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic3.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic4.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic5.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic6.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic7.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic8.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic9.jpg" /></a>
+              </li>
+              <li>
+                <a><img alt="pic" src="../../../../assets/images/pic10.jpg" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">         
+            <mat-label class="row col-12">Desired Date Repair</mat-label>
+            <input class="col-12 col-sm-9 " matInput [matDatepicker]="desired_date" formControlName='desireddate' placeholder="Desired Date of Repair*" >
+            <mat-datepicker-toggle class="col-lg-3" matSuffix [for]="desired_date"></mat-datepicker-toggle>
+            <mat-datepicker class="col-lg-3" #desired_date></mat-datepicker>
+          </div>
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h4>Location of Repair</h4>
+            <mat-radio-group class="row" formControlName='location'>
+              <mat-radio-button class="col-12" value="1">Store Location</mat-radio-button>
+              <mat-radio-button class="col-12" value="2">Mobile Services</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h4>Service Professional Type</h4>
+            <mat-radio-group class="row" formControlName='service_type'>
+              <mat-radio-button class="col-12" value="3">Licensed/ Verified</mat-radio-button>
+              <mat-radio-button class="col-12" value="4">Unlicensed/ Verified</mat-radio-button>
+              <mat-radio-button class="col-12" value="5">Both</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h4>Location of Service</h4>
+
+            <mat-select class="selectpicker" placeholder="Select Address" formControlName='address'>
+              <mat-option value='Home'>Home</mat-option>
+              <mat-option value='Mom & Dad'>Mom & Dad</mat-option>
+              <mat-option value='Add New'>Add New</mat-option>
+            </mat-select>
+            <div class="row">
+              <div class="col-12">4444
+                Address 1: 15 Main Street<br />
+                Address 2: appartment 306<br />
+                City: Columbus<br />
+                State/Zip: Oh, 44444<br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <input type="text" class="form-control" id="pwd" placeholder="Address Title" formControlName='add_title'>
+                <input type="text" class="form-control" id="pwd" placeholder="Address 1" formControlName='add_1'>
+                <input type="text" class="form-control" id="pwd" placeholder="Address 2" formControlName='add_2'>
+                <input type="text" class="form-control" id="pwd" placeholder="City" formControlName='city'>
+                <input type="text" class="form-control" id="pwd" placeholder="Zip Code" formControlName='zipCode'>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="checkbox_re">
+              <mat-checkbox value="false" formControlName='TermCondi'>I agree to the XpBids <a href="#">Terms and Conditions.</a></mat-checkbox>
+              <span class="control_indicator_tm"></span>
+            </div>
+            <button type="submit" class="btn btn-primary blank mr-3">
+              Back
+            </button>
+            <button type="submit" class="btn btn-primary" (click)="UpdatePost()">Submit Post</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
